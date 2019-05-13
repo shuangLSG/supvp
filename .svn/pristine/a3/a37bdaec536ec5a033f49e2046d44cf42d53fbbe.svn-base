@@ -1,0 +1,391 @@
+@font-face {
+    font-family: MarkPro-Bold;
+    src: url("../../fonts/MarkPro-Bold.otf");
+}
+img{
+    vertical-align: top;
+}
+.font-MarkPro{
+    font-family: MarkPro-Bold;
+}
+.font-blue{
+    color:#3B7DF0;
+}
+.font-light-blue{
+    color:#C8DCFF;
+}
+.font-black{
+    color:#101D37;
+}
+.font-gray{
+    color:#999;
+}
+.font-light-gray{
+    color:#D5D5D5 !important;
+}
+.font-yellow{
+    color:#FFAA01;
+}
+.font-red{
+    color:#E70E1D;
+}
+
+.page-bg{
+    background-color: #F9F9FC;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+.text-size-22{ 
+    font-size: 0.586rem;
+}
+.text-size-18{ 
+    font-size: 0.48rem !important;
+}
+.text-size-16{
+    font-size: 0.426rem ; 
+}
+.text-size-15{ 
+    font-size: 0.4rem !important;
+}
+.text-size-14{ 
+    font-size: 0.373rem !important;
+}
+.text-size-13{ 
+    font-size: 0.346rem;
+}
+.text-size-12{ 
+    font-size: 0.32rem;
+}
+
+
+.custom-round {
+    border-radius: 999px;
+}
+.custom-flex-c{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+
+.mui-table-view-cell.mui-active{
+    background-color: transparent;
+}
+
+
+.top-container {
+    width: 100%;
+    height: 5.973rem;
+    flex-direction: column;
+    color:#fff;
+    background: url(../../images/limit/repaid_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+.top-container >div{
+    height: 2rem;
+}
+.top-container h2 {
+    font-size: 1.146rem;
+    line-height: 1.1;
+}
+.top-container .position-tr{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.56rem;
+}
+
+.list-container .mui-table-view:before{
+    height:0;
+}
+
+
+
+.mui-table-view-cell:after,
+.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after{
+    background-color: #eee;
+}
+.mui-table-view:after {
+    height: 0;
+}
+
+
+/* **** 全部待还 ***** */
+.list-container.all-repaid .mui-table-view-cell:after {
+    height: 0;
+}
+
+.list-container.all-repaid {
+    position: relative;
+    top: -0.7rem;
+    padding: 0 0.533rem;
+}
+.list-container.all-repaid li h3 {
+    margin-bottom: 0.14rem;
+}
+
+.list-container.all-repaid li span {
+    color: #999;
+    margin-top: 0.2rem;
+}
+
+.list-container.all-repaid li button {
+    width: 2.32rem;
+    height: 0.853rem;
+    border: 1px solid #3B7DF0;
+    color: #3B7DF0;
+}
+.list-container.all-repaid li {
+    padding: 0.48rem 0.52rem 0.48rem 0.493rem;
+    margin-bottom: 0.4rem;
+    background-color: #fff;
+    box-shadow: 0px 1px 16px 0px rgba(106, 106, 106, 0.06);
+    border-radius: 0.053rem;
+}
+
+.list-container.all-repaid li h3 strong {
+    font-size: 0.666rem;
+    font-weight: normal;
+}
+
+
+
+/**** 本周待还 ****/
+.list-container.week-repaid .mui-table-view{
+    margin-top: 0.32rem;
+}
+.week-repaid .mui-checkbox label, .mui-radio label{
+    padding: 0;
+    line-height: 0.853rem;
+}
+.list-container.week-repaid li h3 span{
+    color:#101D37;
+}
+.list-container.week-repaid li{
+    padding: 0.466rem 0.466rem 0.34rem;
+}
+.list-container.week-repaid li p{
+    line-height: 1;
+}
+.list-container.week-repaid li p.date{
+    padding: 0.2rem 0 0.36rem;
+}
+
+.list-container.week-repaid .state-img{
+    width: 2.346rem;
+    position: absolute;
+    right: 0;
+    top: -0.1rem;
+}
+
+.mui-input-row{
+    overflow: initial; 
+}
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{
+    right: 0;
+    top: 25%;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+    color:#3B7DF0;
+    font-size: 0.66rem !important;
+}
+
+
+
+.action-bar {
+    height: 1.44rem;
+    padding-left: 0.293rem;
+    box-shadow:0px -3px 7px 0px rgba(51,51,51,0.11);
+}
+.action-bar .mui-checkbox {
+    flex-direction: column;
+}
+.action-bar .mui-checkbox input {
+    position: static;
+    margin: 0.16rem 0 0;
+}
+.action-bar .custom-pay-btn {
+    width: 3.2rem;
+    line-height: 1.6rem;
+    height: 100%;
+    color:#fff;
+    background:linear-gradient(90deg,rgba(46,116,235,1) 0%,rgba(96,154,255,1) 100%);
+}
+.action-bar .custom-disable-btn{
+    background:#ddd !important;
+}
+.pay-total{
+    display: inline-block;
+    padding-top: 0.52rem;
+    padding-left: 0.2rem;
+}
+.pay-total span{
+    font-size:0.88rem;
+    margin-left: 0.1rem;
+}
+
+
+.custom-empty{
+    padding-top: 2rem;
+}
+.custom-empty img{
+    width: 3.68rem;
+    margin-bottom: 0.54rem;
+}
+
+
+
+/* =======================================================自定义popver 底部弹出框 =======================================================*/
+.mui-popover.custom-popover .mui-card{
+    box-shadow: 0 0 0;
+}
+.content-wrapper{
+    
+}
+.mui-popover.custom-popover .mui-table-view{
+    background: #fff;
+    color:#444;
+    margin: 0;   
+}
+
+.mui-popover.custom-popover .mui-card{
+    margin: 0;
+}
+.mui-popover.custom-popover .mui-card-header {
+    font-size: 0.453rem;
+    padding: 0.4rem 0.533rem;
+    font-weight: 700;
+}
+.mui-popover.custom-popover .mui-card-header .icon-box{
+    position: absolute;
+    right: 0.23rem;
+    padding: 0.3rem;
+    bottom: 0;
+}
+.mui-popover.custom-popover .mui-card-header .mui-icon{
+    position: absolute;
+    right:0.533rem;
+    width: 0.4rem;
+}
+.mui-popover.custom-popover .mui-card-header:after{
+    background-color: #f5f5f5;
+}
+.mui-popover.custom-popover .mui-table-view.mui-grid-view .mui-table-view-cell{
+    display: block;
+}
+.mui-popover.custom-popover .mui-card-content-inner{
+    padding: 0;
+    overflow: hidden;
+}
+.mui-popover.custom-popover .mui-card-content-inner .content-wrapper{
+    padding: 0 0.64rem 0.506rem 0.66rem;
+    overflow-y: auto;
+}
+.mui-popover li,
+.mui-popover .mui-input-row label{
+    padding-left: 0;
+    padding-right: 0;
+}
+.mui-popover li{
+    height: 2rem;
+    padding: 0.52rem 0;
+}
+.mui-popover li img{
+    width: 0.853rem;
+    margin-right: 0.2rem;
+}
+
+.mui-popover.custom-popover .mui-radio input[type=radio]:before{
+    color:#D5D5D5; 
+}
+.mui-popover.custom-popover .mui-radio input[type=radio]:checked:before {
+    content: '\e442';   
+    color: #007aff;
+}
+
+
+.mui-popover.custom-popover .mui-scroll-wrapper,
+.mui-popover.custom-popover.mui-popover.custom-popover-action .mui-table-view,
+.mui-popover.custom-popover.mui-popover.custom-popover-action .mui-table-view.mui-grid-view .mui-table-view-cell{
+    margin: 0;
+}
+
+.custom-gradient{
+    height:1.2rem;
+    color:#fff;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin-top:0.453rem;
+    background:linear-gradient(90deg,rgba(46,116,235,1) 0%,rgba(96,154,255,1) 100%);
+}
+
+
+
+
+/**** 账单详情 ****/
+.instalmentItem.mui-scroll{
+    padding: 0.346rem 0.6rem 0;
+ }
+.instalmentItem .top-container{
+    position: relative;
+    height:3.86rem;
+    background-image:none;
+}
+.instalmentItem .top-container img{
+    position: absolute;            
+    width: 100%;
+    top:0;
+    z-index:2;
+}
+.instalmentItem .top-container img.shadow{
+    top: 0.32rem;
+    z-index:1;
+}
+.instalmentItem .top-container>div{
+    position: absolute;
+    padding: 0.3rem 0.533rem;
+    z-index: 3;
+}
+.instalmentItem .top-container h2 {
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+}
+.instalmentItem .top-container .font-MarkPro span{
+    font-size:0.933rem;
+}
+.instalmentItem li {
+    padding:0.466rem 0 0.34rem !important;
+}
+.instalmentItem .mui-table-view-cell:after{
+    left:0;
+}
+.instalmentItem li p.date span{   
+    letter-spacing: 1px;
+    margin-left: 0.14rem;
+}
+.instalmentItem li h3 .font-light-gray{
+    margin-right: 0.2rem;
+}
+.instalmentItem li .mui-btn{
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width:2.32rem;
+    height:0.853rem;
+    line-height:0.853rem;
+    padding: 0;
+    color: #fff;
+    border: none;
+    background:rgba(59,125,240,1);
+    border-radius:99px;
+}
+
+
+
+
+.mui-pull-caption-nomore{
+    display: none;
+}

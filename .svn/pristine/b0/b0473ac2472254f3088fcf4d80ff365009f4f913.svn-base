@@ -1,0 +1,283 @@
+
+
+
+.mui-bar-nav~.mui-content{
+    padding-bottom: 1.4rem;
+}
+.custom-mask {
+    display: none;
+    z-index: 99;
+    background-color: rgba(0,0,0,0.1); 
+}
+
+.custom-newlyweds {
+    width: 100%;
+    height: 4.37rem;
+}
+
+.custom-service {
+    height: 0.56rem;
+    padding: 0 0.66rem;
+    box-sizing: border-box;
+}
+
+.custom-service img {
+    height: 100%;
+}
+
+button.custom-btn:enabled:active {
+    color: #ac8856;
+    background: transparent;
+}
+.mui-control-content .mui-loading {
+    margin-top: 50px;
+}
+/* public */
+.SecKill-box.mui-table-view.mui-grid-view,
+.SecKill-box.mui-table-view.mui-grid-view .mui-table-view-cell,
+.SecKill-box.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn),
+.classify-box.mui-table-view.mui-grid-view,
+.classify-box.mui-table-view.mui-grid-view .mui-table-view-cell,
+.classify-box.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn){
+    padding: 0;
+}
+.SecKill-box.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn),
+.classify-box.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn){
+    margin: 0 !important;
+}
+
+
+/*搜索*/
+
+
+/*** banner ***/
+.custom-banner {
+    height: 4rem;
+    position:relative;
+    overflow: hidden;
+    /* box-shadow:0px 10px 18px 0px rgba(217,222,241,0.52); */
+    z-index: 2;
+}
+.custom-banner  .mui-slider .mui-slider-group .mui-slider-item>a:not(.mui-control-item){
+    padding: 0 0.04rem;
+}
+.custom-banner img{
+    height: 4rem;
+    border-radius: 0.2rem;
+}
+#bannerSlider .mui-slider-indicator{
+    bottom: 0.4rem;
+}
+.mui-slider-indicator .mui-indicator{
+    width: 9px;
+    height: 3px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 3px;
+    box-shadow:0 0 0 rgba(0,0,0,0) !important;
+    border-radius: 999px;
+    margin: 0.01rem 0.08rem; 
+}
+.mui-slider-indicator .mui-active.mui-indicator{
+    background: rgba(255,255,255,1);
+}
+.mui-slider-group .mui-scroll-wrapper{
+    padding-bottom:2.9rem !important;
+}
+
+
+
+
+/******************  cell 后补样式 ***********/
+/* .custom-cell .describe{
+    padding: 0 0.02rem;
+    line-height: 1;
+    padding-top: 0.3rem;
+    padding-bottom: 0.18rem;
+} */
+.custom-cell .custom-light-gray{
+    line-height: 1;
+    padding-top: 0.06rem;
+}
+
+/*** 分类 ***/
+.classify-box.mui-grid-view .mui-table-view-cell{
+    margin-right: 0.74rem !important;
+}
+.classify-box.mui-grid-view .mui-table-view-cell:nth-child(5n){
+    margin-right: 0 !important;
+}
+.classify-box .mui-icon{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.classify-box.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+    font-size: 0.32rem;
+    margin-top: 0.12rem;
+}
+
+
+.classify-box.mui-table-view.mui-grid-view{
+    /* padding-left: 0.05rem; */
+    padding-bottom: 0.32rem;
+}
+.classify-box.mui-table-view.mui-grid-view .mui-table-view-cell{
+    padding-top: 0.46rem;
+    padding-bottom: 0.05rem;
+}
+/*** slider 限时抢购 ***/
+
+.section-SecKill{
+    margin-bottom: 0.266rem;
+}
+.section-SecKill.module .module-hd{
+    height: 1.2rem;
+    padding:0 0.346rem 0 0.146rem ;
+
+    color: #D51818;
+    font-size: 0.5rem;
+    font-weight: 700;
+}
+.section-SecKill .module-hd img{
+    width: 4.4rem;
+}
+.section-SecKill .module-hd .countDownTime-box{
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 0.52rem;
+} 
+.section-SecKill .module-hd .countDownTime-box .time{
+    background-color: #fff5eb;
+    float: right;
+    margin-left: 0.2rem;
+    padding: 0 0.1rem;
+}
+.section-SecKill .module-hd .countDownTime-box strong span{
+    font-size: 0.46rem;
+    /* position: relative;
+    bottom: 0.02rem; */
+}
+.section-SecKill .module-hd .countDownTime-box .time>span{
+    display: inline-block;
+    width: 0.533rem;
+    height: 0.533rem;
+    line-height: 0.533rem;
+    color:#f22d47;
+    font-size: 0.42rem;
+    text-align: center;
+    border-radius:0.066rem;
+}
+.section-SecKill .module-hd .countDownTime-box small{
+    padding: 0 0.1rem;
+    color:#f22d47;
+}
+.mui-slider .mui-slider-group .mui-slider-item{
+    padding-bottom: 0.4rem;
+}
+.section-SecKill .module-bd ul{
+    padding: 0.3rem 0 0 0 !important;
+    overflow: hidden;
+}
+/* .section-SecKill .custom-cell .describe{
+    padding: 0 0.02rem;
+    line-height: 1;
+    padding-top: 0.3rem;
+    padding-bottom: 0.1rem;
+} */
+.section-SecKill .custom-cell{
+    margin-left: 0.34rem !important; 
+    padding: 0.1rem 0.1rem 0 !important;       
+    box-shadow: 0px 0px 10px 0 rgba(217,222,241,0.52);
+}
+.section-SecKill .mui-slider-indicator{
+    bottom:0;
+}
+.section-SecKill .mui-slider-indicator .mui-indicator{
+    background-color: #e0e0e0;
+}
+.section-SecKill .mui-slider-indicator .mui-indicator.mui-active{
+    background-color: #999;
+}
+
+
+
+/*** 分期 ***/
+
+
+.module-main-commodity{
+    height: 3.73rem;
+}
+.module-main-commodity.custom-flex{
+    margin-bottom: 0.32rem;
+}
+.module-main-commodity.module-big-img img{
+    height: 3.33rem;
+    width: 100%;
+    border-radius: 5px;
+}
+.module-main-commodity img{
+    width: 3.73rem;
+    height: 3.73rem;
+}
+.section-stage .main-commodity-spec{
+    padding:0.4rem;
+    padding-bottom: 0.3rem;
+    background-color: #FDF6EC;
+    width: calc(10rem - 5rem);
+    flex: 1;
+}
+.section-stage .main-commodity-spec div{
+    width: 5rem;
+}
+.section-stage .main-commodity-spec .describe{
+    line-height: 1.4;
+    color:#444;
+    margin-bottom: 0.2rem;
+}
+.section-stage .main-commodity-spec .tag{
+    color:#888;
+}
+.section-stage .main-commodity-spec .tag+p{
+    margin-top: 0.12rem;
+    line-height: 1.3;
+}
+
+.section-stage small.scale{
+    transform: scale(0.6);    
+}
+
+.section-stage .custom-pink small{
+    margin-left: 0.05rem;
+}
+
+section .custom-cell .custom-cell-content small,
+section .custom-cell .custom-cell-content .custom-pink small {
+    margin: 0 !important;
+}
+
+/** list **/
+.module-menu.mui-table-view:before, 
+.module-menu.mui-table-view:after{
+    background-color: transparent;
+}
+.module-menu.mui-table-view.mui-grid-view{
+    padding: 0;
+    padding-bottom: 0.1rem;
+}
+.module-menu.mui-table-view.mui-grid-view .mui-table-view-cell{
+    margin-right: 0.24rem;
+    margin-bottom: 0.14rem;
+    box-sizing: border-box;
+}
+
+
+.mui-popup-title+.mui-popup-text{
+    width: 58%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.mui-bar-tab .mui-tab-item .mui-icon {
+    width: 0.64rem;
+    height: auto;
+}

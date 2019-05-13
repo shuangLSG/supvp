@@ -1,0 +1,150 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class dologin {
+    
+}
+class loginSend{}
+
+class codeLogin{}
+
+class xcxLogin {
+    
+}
+
+class Login extends MY_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->helper('url');
+        $this->load->model('Login_model');
+    }
+
+  
+    public function loginSend(){
+        $mobile = $this->input->post('mobile');
+        if ($mobile == '') {
+            $this->error(Error::e1001);
+        }
+        if ($this->checkmobile($mobile) == false) {
+            $this->error(Error::e1002);
+        }
+        $param = new loginSend();
+        $param->mobile = $mobile;
+        $res = $this->decode($this->Login_model->loginSend($this->encode($param)));
+        echo json_encode($res);
+    }
+
+    public function doLogin() {
+
+        $p = $this->input->post();
+        if ($p['mobile'] == '') {
+            $this->error(Error::e1000);
+        }
+        if ($this->checkmobile($p['mobile']) == false) {
+            $this->error(Error::e1001);
+        }
+        if ($p['password'] == '') {
+            $this->error(Error::e1002);
+        }
+        $param = new dologin();
+        $param->mobile = $p['mobile'];
+        $param->password = $p['password'];
+        $res = $this->decode($this->Login_model->login($this->encode($param)));
+        if ($res->s == 200) {
+            session_start();
+            MyMemcache::share()->set('dianshangH5_' . session_id(), $res->d, 24 * 60 * 60);
+        }
+        echo json_encode($res);
+    }
+       
+
+    public function AppSetPassword() {
+        $p = $this->input->post();
+        if ($p['mobile'] == '') {
+            $this->error(Error::e1000);
+        }
+        if ($this->checkmobile($p['mobile']) == false) {
+            $this->error(Error::e1001);
+        }
+        if ($p['password'] == '') {
+            $this->error(Error::e1002);
+        }
+        $param = new codeLogin();
+        $param->mobile = $p['mobile'];
+        $param->password = $p['password'];
+        $res = $this->decode($this->Login_model->AppSetPassword($this->encode($param)));
+        echo json_encode($res);
+    }
+
+    public function codeLogin() {
+        $p = $this->input->post();
+        if ($p['mobile'] == '') {
+            $this->error(Error::e1000); 
+        }
+        if ($this->checkmobile($p['mobile']) == false) {
+            $this->error(Error::e1001);
+        }
+        if ($p['code'] == '') {
+            $this->error(Error::e1002);
+        }
+        $param = new codeLogin();
+        $param->mobile = $p['mobile'];
+        $param->code = $p['code'];
+        $res = $this->decode($this->Login_model->codeLogin($this->encode($param)));
+        if ($res->s == 200) {
+            session_start();
+            MyMemcache::share()->set('dianshangH5_' . session_id(), $res->d, 24 * 60 * 60);
+        }
+        echo json_encode($res);
+    }
+
+    public function webRegister() {
+        $p = $this->input->post();
+        if ($p['mobile'] == '') {
+            $this->error(Error::e1000);
+        }
+        if ($this->checkmobile($p['mobile']) == false) {
+            $this->error(Error::e1001);
+        }
+        if ($p['code'] == '') {
+            $this->error(Error::e1002);
+        }
+        $param = new codeLogin();
+        $param->mobile = $p['mobile'];
+        $param->code = $p['code'];
+        $res = $this->decode($this->Login_model->webRegister($this->encode($param)));
+        if ($res->s == 200) {
+            session_start();
+            MyMemcache::share()->set('dianshangH5_' . session_id(), $res->d, 24 * 60 * 60);
+        }
+        echo json_encode($res);
+    }
+    
+
+
+    public function loginout() {
+        session_start();
+        MyMemcache::share()->delete('dianshangH5_' . session_id());
+        $data = array('s' => 200, 'd' => 1);
+        echo json_encode($data);
+    }
+
+    public function xcxLogin() {
+        $p = $this->input->post();
+        if (empty($p['openid'])) {
+            $this->error(Error::e1016);
+        }
+        $param = new xcxLogin();
+        $param->wxappid = $p['openid'];
+        $res = $this->decode($this->Login_model->xcxLogin($this->encode($param)));
+        if ($res->s == 200) {
+            session_start();
+            MyMemcache::share()->set('dianshangH5_' . session_id(), $res->d, 24 * 60 * 60);
+            $res->d[0]->session = session_id();
+        }
+        echo json_encode($res);
+    }
+
+}

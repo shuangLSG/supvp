@@ -1,0 +1,220 @@
+html,
+body {
+    height: 100%;
+}
+
+a:active {
+    color: #fff;
+}
+input::-webkit-input-placeholder {
+    color: #A1A7B9;
+}
+.position-c {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.font-gray{
+    color:#999999;
+}
+.font-gray2{
+    color:#A1A7B9;
+}
+.font-blue{
+    color:#308BF1;
+}
+.text-size-16{
+    font-size: 0.426rem ; 
+}
+.text-size-12{ 
+    font-size: 0.32rem;
+}
+.mui-content{
+    background-color: #FFF;
+}
+.main-content {
+    padding: 0.4rem 0.98rem;
+}
+
+.input-group {
+    position: relative;
+    line-height: 1.1rem;
+    margin-bottom: 0.38rem;
+    border-bottom: 1px solid #eee;
+}
+.input-group input {
+    width: 66%;
+    height: 1rem;
+    padding: 0 0.5rem;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 0.414rem;
+    letter-spacing: 1px;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.ID-card-wrapper.ID-1 {
+    margin-bottom: 0.38rem;
+}
+.ID-card-wrapper .ID-box{
+    position: relative;    
+    height: 4.746rem;
+}
+.ID-card-wrapper.ID-1 .ID-box{
+    background: url(../../images/limit/ID_1.png) no-repeat;
+    background-size: 100% 100%; 
+}
+.ID-card-wrapper.ID-2 .ID-box{
+    background: url(../../images/limit/ID_2.png) no-repeat;
+    background-size: 100% 100%; 
+}
+.ID-box img:first-child{
+    width:5.973rem;
+    height:3.386rem;
+    z-index: 10;
+}
+
+.ID-box img:nth-child(2),
+input[name="sendpic"] {
+    width:5.546rem;
+    height:3.466rem;
+    z-index: 11;
+}            
+input[name="sendpic"] {
+    opacity: 0;
+}
+.mui-input-row{
+    margin: 0.66rem 0 0.3rem;
+}
+.mui-checkbox.mui-left label{
+    padding: 0;
+}
+.mui-checkbox.mui-left input[type=checkbox]{
+    left:0;
+    top: 0.16rem;
+    line-height: 0.66rem;
+}
+.mui-checkbox.mui-left p{
+    padding-top:0.17rem;
+    padding-left:0.62rem;
+    line-height: 1.6;
+}
+.mui-checkbox input[type=checkbox]:before {
+    font-size: 0.5rem;
+}
+/* 只有点击我已同意才能添加选中效果 */
+/* .mui-checkbox input[type=checkbox]:checked:before {
+    content:'\e411' !important;
+    color: #aaa !important;
+}
+.mui-checkbox input[type=checkbox].active:checked:before{
+    content: '\e442' !important;
+    color:#007aff !important;
+} */
+.btn-box {
+    padding-top: 0.1rem;
+}
+.btn-box button.mui-btn-disabled{
+    background-color: #D9DCE4;
+    border-color:#D9DCE4;
+}
+.btn-box button{
+    height:1.253rem;
+    padding: 0;
+    border-radius:999px;
+}
+
+
+
+.Identity-img{
+    width: 5rem;
+    height: 3rem;
+    z-index: 3;
+}
+
+.step-box .step-hd img{
+    width:4.613rem;
+    height:1.893rem;
+}
+.step1 .step-hd{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.step2 .step-hd{
+    padding-top: 0.88rem;
+    padding-bottom: 0.5rem;
+}
+
+
+
+/* 侧滑 */
+.mui-off-canvas-right{
+    width: 100%;
+    color:#666666;
+    background-color: #fff;
+    font-size:0.32rem;
+    transition: transform 350ms cubic-bezier(.165,.84,.44,1);
+}
+.mui-off-canvas-right header{
+    padding: 0;
+    background-color: #fff;
+}
+.mui-off-canvas-right header .img-arrow{
+    padding: 0.4rem;
+}
+.mui-off-canvas-right header .img-arrow img{
+    width: 0.26rem;
+    padding: 0;
+}
+.mui-off-canvas-right header h1{
+    font-size: 0.48rem;
+}
+.mui-off-canvas-right .content{
+    padding: 0 0.533rem 0.6rem;
+}
+.mui-off-canvas-right.mui-active{
+    transform: translate3d(0px, 0px, 0px) !important;
+    visibility: visible;
+}
+
+/* 地区选择 */
+
+/* .bg-white{
+    background-color:#fff;
+}
+.page-bg{
+    background-color:#F9F9FC;
+} */
+/* html,body,.mui-row,.mui-col-xs-6{
+    height:100%
+} */
+.font-purple{
+    color:#5E677B;
+} 
+
+.text-size-15{
+    font-size: 0.4rem;
+}
+
+#offCanvasSideArea li{
+    position:relative;
+    height: 1.333rem;
+    line-height: 1.333rem;
+}
+#offCanvasSideArea li.active{
+    color:#367DF8;
+}
+#offCanvasSideArea li.active:before{
+    content:'';
+    position:absolute;
+    left:0.44rem;
+    top:32%;
+    height:0.4rem;
+    width:0.08rem;
+    background-color:#366BFE;
+}

@@ -1,0 +1,184 @@
+<?php
+
+defined('BASEPATH') or exit('No direct script access allowed');
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+class bargain
+{
+
+}
+
+
+class BargainH5 extends MY_Controller
+{
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper('url');
+        $this->load->model('BargainH5_model');
+    }
+   
+    // 砍价
+    public function bargainHome()
+    {
+        $this->load->view("bargainHome");
+    }
+    // 认证
+    public function bargainRZ()
+    {
+        $ss = $this->input->get("ss");
+        $res = MyMemcache::share()->get('dianshangH5_' .$ss);
+        session_start();
+        MyMemcache::share()->set('dianshangH5_' . session_id(), $res, 24 * 60 * 60);
+        $this->load->view("bargainRZ");
+    }
+    // 砍价详情页面 
+    public function bargainDetail()
+    {
+        $this->load->library('WxShare');
+        $SignPackage = WxShare::GetSignPackage();
+        $data["signPackage"] = $SignPackage;
+        $this->load->view("bargainDetail", $data);
+    }
+    // 多个商品的砍价页面 
+    public function bargainMore()
+    {
+        $this->load->view("bargainMore");
+    }
+    // 商品详情
+    public function bargaincdetail()
+    {
+        $this->load->view("bargaincdetail");
+    }
+
+
+    public function queryBargain()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainactivityid = $p['bargainactivityid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->queryBargain($this->encode($param)));
+        echo json_encode($data);
+    }
+
+    public function initBargain()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainactivityid = $p['bargainactivityid'];
+        $param->commodityid = $p['commodityid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->initBargain($this->encode($param)));
+        $data->ss=session_id();
+        echo json_encode($data);
+    }
+
+    public function bargainQueryById()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainid = $p['bargainid'];
+        $param->commodityid = $p['commodityid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->bargainQueryById($this->encode($param)));
+        echo json_encode($data);
+    }
+
+    public function bargainIdCard()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->realname = $p['realname'];
+        $param->idcard = $p['idcard'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->bargainIdCard($this->encode($param)));
+        echo json_encode($data);
+    }
+
+
+
+    public function bargainWinners()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainactivityid = $p['bargainactivityid'];
+        if (!empty($p['commodityid'])) {
+            $param->commodityid = $p['commodityid'];
+        }
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->bargainWinners($this->encode($param)));
+        echo json_encode($data);
+    }
+
+    public function bargaining()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainactivityid = $p['bargainactivityid'];
+        $param->commodityid = $p['commodityid'];
+        $param->bargainid = $p['bargainid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->bargaining($this->encode($param)));
+        echo json_encode($data);
+    }
+
+    public function queryAllBargain()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainactivityid = $p['bargainactivityid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->queryAllBargain($this->encode($param)));
+        echo json_encode($data);
+    }
+
+
+    public function bargainAddress()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->address = $p['address'];
+        $param->bargainid = $p['bargainid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->bargainAddress($this->encode($param)));
+        echo json_encode($data);
+    }
+
+    public function detail()
+    {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        $p = $this->input->post();
+        $param = new bargain();
+        $param->bargainactivityid = $p['bargainactivityid'];
+        $param->commodityid = $p['commodityid'];
+        $param->userinfoid = isset($res->id) ? $res->id : 0;
+        $data = $this->decode($this->BargainH5_model->detail($this->encode($param)));
+        echo json_encode($data);
+    }
+
+
+}

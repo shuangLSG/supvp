@@ -1,0 +1,96 @@
+
+    function setShareV(){
+        var res = {};
+        $.ajaxSetup({
+            async: false
+        });
+        $.post('../bargainh5/share', {}, function (data) {
+            res = data.signPackage
+        }, 'json');
+        return res;
+    }
+         
+    function isWeiXin(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    var data = setShareV();
+    // if(isWeiXin()){
+    //     var data = setShareV();
+    //     var goodsname = $('.list-container li h3').text();
+    //     var imgUrl = $('.list-container li').find('.custom-list-pic:not(".failed")').attr('src');
+    //     wxShare(data);
+    // }
+   
+    //  =========================================================  分享 ==========================================================================
+
+    //    function wxShare(data){
+            var goodsname = $('.list-container').find('li h3').html();
+            var imgUrl = $('.list-container li').find('.custom-list-pic:not(".failed")').attr('src');
+           
+           var i = data.url.indexOf('&f=');
+            url = data.url.substring(0,i);
+            var wxData = {
+                "imgUrl": imgUrl,
+                "link": url,
+                "title": goodsname,
+                "desc": '这是supvp官方为回馈用户提供的福利，砍价砍到0元就能免费领取'
+            };
+
+            // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮  
+            // wx.hideMenuItems({
+            //     menuList: ["menuItem:share:timeline", "menuItem:copyUrl", "menuItem:share:appMessage", "menuItem:share:qq", "menuItem:share:weiboApp", "menuItem:favorite", "menuItem:share:facebook", "menuItem:share:QZone", "menuItem:editTag", "menuItem:delete", "menuItem:copyUrl", "menuItem:originPage", "menuItem:readMode", "menuItem:openWithQQBrowser", "menuItem:openWithSafari", "menuItem:share:email", "menuItem:share:brand"] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮
+            // });
+            // function onBridgeReady() {
+            //     WeixinJSBridge.call('hideOptionMenu');
+            // }
+
+            // if (typeof WeixinJSBridge == "undefined") {
+            //     if (document.addEventListener) {
+            //         document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            //     } else if (document.attachEvent) {
+            //         document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            //         document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            //     }
+            // } else {
+            //     onBridgeReady();
+            // }
+            // 通过config接口注入权限验证配置,参数由后台提供,
+            wx.config({
+                debug: false,
+                appId: data.appId,
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: [
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage'
+                ]
+            });
+            wx.ready(function () {
+                // 分享朋友圈代码
+                wx.onMenuShareTimeline({
+                    title: wxData.title,
+                    link: wxData.link,
+                    imgUrl: wxData.imgUrl,
+                    success: function () {}
+                });
+                // 分享给朋友代码
+                wx.onMenuShareAppMessage({
+                    title: wxData.title,
+                    desc: wxData.desc,
+                    link: wxData.link,
+                    imgUrl: wxData.imgUrl,
+                    type: 'link',
+                    dataUrl: '',
+                    success: function () {
+                    }
+                });
+            });
+    //    }
+   

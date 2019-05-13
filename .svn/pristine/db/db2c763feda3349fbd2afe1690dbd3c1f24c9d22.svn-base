@@ -1,0 +1,216 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+class getAddress {
+    
+}
+
+class addAddress {
+    
+}
+
+class editAddress {
+    
+}
+
+class delAddress {
+    
+}
+
+class getcapital {
+    
+}
+
+class getCityById {
+    
+}
+class getCity {
+    
+}
+
+class Address extends MY_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->helper('url');
+        $this->load->model('Address_model');
+        $this->load->model('City_model');
+    }
+
+    /**
+     * 获取地址
+     */
+    public function getAddress() {
+        $p = $this->input->post();
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        if ($res == null || count($res) == 0) {
+            $this->error(Error::e9999);
+        } else {
+            $param = new getAddress();
+            $param->userinfoid = $res->id;
+            $data = $this->decode($this->Address_model->getAddress($this->encode($param)));
+            $newdata = array();
+            foreach ($data->d as $item) {
+                $item->cityid = $item->city;
+                $item->capitalid = $item->capital;
+                $param->cityid = $item->city;
+                $param->capitalid = $item->capital;
+                $rescity = $this->decode($this->City_model->cityById($this->encode($param)));
+                if (is_object($rescity)) {
+                    $rescity = (count($rescity->d) > 0 ? $rescity->d[0] : null);
+                } else {
+                    $rescity = null;
+                }
+                $rescapital = $this->decode($this->City_model->capitalById($this->encode($param)));
+                if (is_object($rescity)) {
+                    $rescapital = (count($rescapital->d) > 0 ? $rescapital->d[0] : null);
+                } else {
+                    $rescapital = null;
+                }
+                $item->city = $rescity == null ? "" : $rescity->name;
+                $item->capital = $rescapital == null ? "" : $rescapital->name;
+                $newdata[] = $item;
+            }
+            $data->d = $newdata;
+            echo json_encode($data);
+        }
+    }
+
+    /**
+     * 添加地址
+     */
+    public function addAddress() {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        if ($res == null || count($res) == 0) {
+            $this->error(Error::e9999);
+        } else {
+            $p = $this->input->post();
+            if ($p['name'] == '') {
+                $this->error(Error::e1007);
+            }
+            if ($p['phone'] == '') {
+                $this->error(Error::e1001);
+            }
+            if ($this->checkmobile($p['phone']) == false) {
+                $this->error(Error::e1002);
+            }
+            if ($p['capital'] == '') {
+                $this->error(Error::e1008);
+            }
+            if ($p['city'] == '') {
+                $this->error(Error::e1009);
+            }
+            if ($p['address'] == '') {
+                $this->error(Error::e1010);
+            }
+            $param = new addAddress();
+            $param->userinfoid = $res->id;
+            $param->name = $p['name'];
+            $param->phone = $p['phone'];
+            $param->capital = $p['capital'];
+            $param->city = $p['city'];
+            $param->address = $p['address'];
+            $param->isdefault = $p['isdefault'] == 1 ? '1' : '0';   
+            $res = $this->decode($this->Address_model->addAddress($this->encode($param)));
+            echo json_encode($res);
+        }
+    }
+
+    /**
+     * 添加地址
+     */
+    public function editAddress() {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        if ($res == null || count($res) == 0) {
+            $this->error(Error::e9999);
+        } else {
+            $p = $this->input->post();
+            if ($p['name'] == '') {
+                $this->error(Error::e1007);
+            }
+            if ($p['phone'] == '') {
+                $this->error(Error::e1001);
+            }
+            if ($this->checkmobile($p['phone']) == false) {
+                $this->error(Error::e1002);
+            }
+            if ($p['capital'] == '') {
+                $this->error(Error::e1008);
+            }
+            if ($p['city'] == '') {
+                $this->error(Error::e1009);
+            }
+            if ($p['address'] == '') {
+                $this->error(Error::e1010);
+            }
+            $param = new editAddress();
+            $param->userinfoid = $res->id;
+            $param->id = $p['id'];
+            $param->name = $p['name'];
+            $param->phone = $p['phone'];
+            $param->capital = $p['capital'];
+            $param->city = $p['city'];
+            $param->address = $p['address'];
+            $param->isdefault = $p['isdefault'] == 1 ? '1' : '0';
+            $result = $this->decode($this->Address_model->editAddress($this->encode($param)));
+            echo json_encode($result);
+        }
+    }
+
+    /**
+     * 删除地址
+     */
+    public function delAddress() {
+        session_start();
+        $res = MyMemcache::share()->get('dianshangH5_' . session_id());
+        if ($res == null || count($res) == 0) {
+            $this->error(Error::e9999);
+        } else {
+            $id = $this->input->post('id');
+            $param = new delAddress();
+            $param->id = $id;
+            $param->userinfoid = $res->id;
+            $data = $this->decode($this->Address_model->delAddress($this->encode($param)));
+            echo json_encode($data);
+        }
+    }
+
+    /**
+     * 获取省
+     */
+    public function getcapital() {
+        $param = new getcapital();
+        $data = $this->decode($this->City_model->city($this->encode($param)));
+        echo json_encode($data);
+    }
+
+    /**
+     * 根据省的id获取下面的市
+     */
+    public function getCityById() {
+        $p = $this->input->post();
+        $param = new getCityById();
+        $param->capitalid = $p['id'];
+        $res = $this->decode($this->City_model->getCityById($this->encode($param)));
+        echo json_encode($res);
+    }
+
+
+    public function getCity() {
+        $p = $this->input->post();
+        $param = new getCity();
+        // $param->capitalid = $p['id'];
+        $res = $this->decode($this->City_model->getCity($this->encode($param)));
+        echo json_encode($res);
+    }
+
+    
+}

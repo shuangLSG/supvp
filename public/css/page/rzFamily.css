@@ -1,0 +1,82 @@
+
+.mui-input-group label {
+    padding: 0.35rem 0;
+}
+
+
+.tab-box{
+    margin-bottom:0.533rem;
+}
+.info-item p{
+    height:1.2rem;
+    line-height:1.2rem;
+    margin-top:0.12rem;
+}
+.info-item .filter-cell{
+    overflow: hidden;
+}
+
+.info-item .filter-cell li:last-of-type {
+    margin-right: 0;
+}
+.info-item .filter-cell li {
+    float: left;
+    width: 2.266rem;
+    height: 0.853rem;
+    line-height: 0.853rem;
+    margin-right: 0.8rem;
+    text-align: center;
+    font-size: 0.373rem;
+    color:#A1A7B9;
+    border-radius: 0.04rem;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+.filter-cell li.active {
+    color: #3B7DF0;
+    border: 1px solid #3B7DF0 !important;
+}
+
+.linkman-item {
+    display: flex;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+.linkman-item:first-child{
+    margin-bottom: 0.12rem;
+}
+.linkman-item .mui-input-group .mui-input-row{
+    margin-top:0;
+}
+.linkman-item .table-left{
+    width: 26%;
+}
+.linkman-item .table-left > div{
+    height: calc(100% - 1.12rem);
+    margin: 0.56rem 0;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #eee;
+}
+
+.linkman-item .mui-input-group{
+    flex: 1;
+    padding-left: 0.4rem;
+}
+.linkman-item .mui-input-group input{
+    height: 1.52rem;
+}
+.linkman-item .mui-input-group .mui-input-row:last-child:after,
+.linkman-item .mui-input-group:after{
+    height:0;
+}
+
+
+
+.mui-button-row {
+    margin-top: 0.3rem;
+}
+.mui-button-row button {
+    margin: 0.14rem 0 0;
+}
+

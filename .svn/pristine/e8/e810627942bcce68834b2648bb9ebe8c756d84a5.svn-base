@@ -1,0 +1,1334 @@
+body {
+    background: #fff;
+}
+
+img {
+    vertical-align: top;
+    /* pointer-events: none;    Android 机上禁止点击图片跳出来 */
+}
+
+
+a {
+    color: #000;
+}
+a:hover,
+a:active {
+    text-decoration: none !important;
+}
+small,.font-Arial{
+    font-family:Arial;
+}
+a:active {
+    color: #000;
+}
+
+@font-face {
+    font-family: MarkPro-Bold;
+    src: url("../fonts/MarkPro-Bold.otf");
+}
+.font-MarkPro{
+    font-family: MarkPro-Bold;
+}
+/* mui */
+
+input::-webkit-input-placeholder {
+    color: #c0c0c0;
+}
+
+button:enabled:active {
+    color: #000 !important;
+    background: transparent;
+    
+}
+.mui-btn-link:enabled:active{
+    border: none !important;
+}
+
+
+.mui-input-group:before,
+.mui-input-group:after,
+.mui-table-view:before,
+.mui-table-view:after {
+    background-color: #f5f5f5;
+}
+
+.mui-input-group .mui-input-row:after,
+.mui-table-view-cell:after {
+    background-color: #ebebeb;
+}
+
+.mui-navigate-right:after {
+    font-size: 0.5rem;
+    top: 50%;
+}
+
+.mui-checkbox input[type=checkbox]:before,
+.mui-radio input[type=radio]:before {
+    font-size: 0.6rem;
+    color: #D5D5D5;
+}
+
+.mui-checkbox input[type=checkbox] {
+    position: initial;
+    width: 0.56rem;
+    height: 0.56rem;
+}
+
+.mui-badge-red,
+.mui-badge-warning{
+    background-color: #FF7E00;
+    border-radius:2px;
+    padding: 0 0.12rem;
+}
+.mui-badge-outlined {
+    background-color: transparent;
+}
+.mui-btn-warning.mui-btn-outlined:enabled:active,
+.mui-btn-warning.mui-btn-outlined,
+.mui-badge-warning.mui-badge-outlined{
+    color:#FF7E00;
+    border:1px solid #FF7E00;
+    border-radius: 99px;
+    padding: 0 0.16rem 0 !important;
+    /* width: 0.733rem;
+    height: 0.346rem; */
+    padding: 0;
+    text-align: center;
+    line-height: 12px;
+}
+.badge-icon{
+    width: 0.8rem;
+    margin-top: 0.1rem;
+}
+.mui-btn-warning.mui-btn-outlined:enabled:active{
+    color:#FF7E00 !important;
+    background-color: transparent !important;
+}
+.mui-badge-red{
+    background-color:#f22d47;
+}
+.custom-orange-gradient {
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #FFD225 , #FFB410);
+    background: -o-linear-gradient(right, #FFD225 , #FFB410);
+    background: linear-gradient(to right, #FFD225 , #FFB410);
+}
+button.custom-carmine-gradient:enabled:active,
+.custom-carmine-gradient {
+    color:#fff !important  ;
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #FF7200 , #FF4605);
+    background: -o-linear-gradient(right, #FF7200 , #FF4605);
+    background: linear-gradient(to right, #FF7200 , #FF4605);
+}
+button.custom-btn-gradient:enabled:active,
+.custom-btn-gradient{
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #F85921 , #FFA200);
+    background: -o-linear-gradient(right, #F85921 , #FFA200);
+    background: linear-gradient(to right, #F85921 , #FFA200);
+}
+.mui-center{
+    text-align: center;
+}
+
+.custom-around{
+    border-radius:50%;
+}
+/* ======================================================== 按钮 ====================================================*/
+
+.custom-radius {
+    border-radius: 999px;
+}
+
+.custom-btn,
+.custom-danger-btn,
+.custom-default-btn {
+    line-height: 0.42rem;
+    height: 0.666rem;
+    padding: 0.1rem 0.3rem;
+    background-color: transparent;
+}
+
+
+.custom-black-btn {
+    color: #fff;
+    border: none;
+}
+
+.custom-pay-btn {
+    width: 3.14rem;
+    color: #fff;
+    text-align: center;
+    background-color: #E70E1D;
+}
+
+.custom-default-btn {
+    border: 1px solid #c1c1c1;
+    color: #000;
+}
+.custom-default-btn-fill {
+    background-color: #cd9e61 !important;
+    color: #fff;
+    border: none;
+}
+.custom-light-wraning-fill:enabled:active,
+.custom-light-wraning-fill {
+    background-color: #FFAA00 !important;
+    color: #fff !important;
+    border: none;
+}
+
+.custom-danger-btn {
+    border: 1px solid #E70E1D;
+    color: #E70E1D;
+}
+
+.custom-disable-btn {
+    color: #fff !important;
+    background-color: #bfbdbd !important;
+}
+
+.custom-block-btn {
+    display: block;
+    width: 100%;
+    height: 1.46rem;
+    line-height: 1.46rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.42rem;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #b89e6e;
+}
+
+a.custom-block-btn:active {
+    color: #fff;
+}
+
+button.custom-danger-btn:enabled:active {
+    color: #d54843;
+}
+.text-decoration{
+    text-decoration: line-through;
+}
+
+
+.wh-180{
+    width:2.4rem !important;
+    height: 2.4rem !important;
+}
+/* ============================================================ 文本溢出 ==========================================*/
+.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after{
+    background-color: #eee;
+}
+.custom-white-space {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.custom-white-space-clamp,
+.mode-2 .custom-cell .custom-cell-content .describe{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.custom-padding-top-28 {
+    padding-top: 0.37rem;
+}
+
+.custom-margin-top-16 {
+    margin-top: 0.2rem;
+}
+.custom-margin-bottom-16 {
+    margin-bottom: 0.2rem;
+}
+.custom-margin-top-20 {
+    margin-top: 0.3rem;
+}
+.custom-margin-top-30 {
+    margin-top: 0.4rem;
+}
+
+
+.custom-bg-color-gray {
+    background-color: rgba(249,249,252,1);
+}
+.custom-margin-right-16{
+    margin-right: 0.2rem;
+}
+.custom-bg-color-white {
+    background-color: #fff !important;
+}
+.page-bg{
+    background-color: #F9F9FC;
+}
+.custom-bg-light-gray{
+    background-color: #D0D0D0;
+}
+.custom-red{
+    background-color: #E70E1D !important;
+}
+
+
+
+/* 字体颜色 */
+.custom-light-orange{
+    color:#FFAA00;
+}
+.custom-orange{
+    color: #FF7E00;
+}
+.custom-pink{
+    color:#f22d47 !important;
+}
+.custom-font-color-red {
+    color: #d54843 !important;
+}
+.custom-red-e {
+    color: #E70E1D;
+}
+.custom-light-gray{
+    color:#A6A6A6;
+}
+.custom-gray{
+    color:#666;
+}
+.custom-gray-8{
+    color:#888;
+}
+.custom-black-4{
+    color:#444 !important;
+}
+.custom-black-2{
+    color:#222 !important;
+}
+
+/* 字体大小 */
+
+.text-size-38{ /* 38/2 */
+    font-size: 0.5rem;
+}
+.text-size-24{ 
+    font-size: 0.64rem !important;
+}
+.text-size-20{
+    font-size: 0.53rem; 
+}
+.text-size-18{
+    font-size: 0.48rem; 
+}
+.text-size-17{
+    font-size: 0.453rem ; 
+}
+.text-size-16{
+    font-size: 0.426rem ; 
+}
+.text-size-15{
+    font-size: 0.4rem !important; 
+}
+.text-size-14{
+    font-size: 0.37rem;
+}
+.text-size-13{ 
+    font-size: 0.346rem !important;
+}
+.text-size-12{ 
+    font-size: 0.32rem;
+}
+.text-size-11{
+    font-size: 0.293rem !important;
+}
+.text-size-9{
+    font-size: 0.24rem !important;
+}
+/* 页面布局 */
+.page-section-26{
+    padding: 0 0.346rem;    
+    margin-bottom: 0.266rem;
+}
+.page-section-30{
+    padding: 0 .4rem;
+}
+.module .module-hd{
+    height: 1.4rem;
+    font-size:0.45rem;
+    color:#222;
+}
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
+.cleafix{
+    overflow: hidden;
+    clear: both;
+}
+.hide,
+.hide.custom-flex{
+    display: none !important;
+}
+/*** 顶部搜索框 ***/
+.custom-page-nav input[type=search]{
+    border-radius: 3px;
+    height: 0.853rem;
+}
+.custom-page-nav .mui-bar{
+    padding:0 0.346rem !important;
+}
+.mui-bar .mui-title{
+    width:100% ;
+    left:0 ;
+    line-height:1.1rem ;
+}
+.mui-bar-nav~.mui-content {
+    padding-top: 1.17rem !important;
+}
+.mui-search .mui-icon{
+    width: 0.4rem;
+    height: 0.4rem;
+    left: 0.32rem;
+}
+.mui-search .mui-placeholder{
+    height: 0.853rem;
+    margin-top: 0.16rem;
+    font-size:0.4rem;
+    text-align: left;
+}
+.mui-search .mui-placeholder span{
+    padding-left: 0.5rem;
+    font-size: 0.34rem;
+}
+/* =======================================================自定义popver 底部弹出框 =======================================================*/
+.mui-popover.custom-popover .mui-card{
+    box-shadow: 0 0 0;
+}
+.mui-popover.custom-popover .mui-table-view{
+    background: #fff;
+    padding: 0 0.4rem;
+    color:#444;
+    margin: 0;   
+}
+
+.mui-popover.custom-popover .mui-card{
+    margin: 0;
+}
+.mui-popover.custom-popover .mui-card-header {
+    font-size: 0.453rem;
+    padding: 0.4rem 0.16rem;
+    font-weight: 700;
+}
+.mui-popover.custom-popover .mui-card-header .mui-icon{
+    position: absolute;
+    right: 0.16rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.mui-popover.custom-popover .mui-card-header:after{
+    background-color: #f5f5f5;
+}
+.mui-popover.custom-popover .mui-table-view.mui-grid-view .mui-table-view-cell{
+    display: block;
+}
+.mui-popover.custom-popover .mui-card-content-inner{
+    padding: 0;
+    overflow: hidden;
+}
+.mui-popover.custom-popover .mui-card-content-inner .content-wrapper{
+    max-height: 10rem;
+    min-height: 5.3rem;
+    overflow-y: auto;
+}
+
+
+.mui-popover.custom-popover .mui-scroll-wrapper,
+.mui-popover.custom-popover.mui-popover.custom-popover-action .mui-table-view,
+.mui-popover.custom-popover.mui-popover.custom-popover-action .mui-table-view.mui-grid-view .mui-table-view-cell{
+    margin: 0;
+}
+
+/* ========================================================== 列表 宽占全屏 ========================================================== */
+
+.custom-recommend-title {
+    text-align: center;
+    position: relative;
+    font-size: 0.4rem;
+    color: #000;
+}
+
+.custom-recommend-title img {
+    width: 2.48rem !important;
+    height: 0.48rem;
+}
+
+.custom-recommend-title h3 {
+    font-size: 0.46rem;
+    font-weight: 700;
+}
+
+.custom-recommend-title.custom-recommend-title p {
+    height: 0.28rem;
+    margin-top: 7px;
+    line-height: 0.28rem;
+    font-size: 0.28rem;
+    color: #adadad;
+}
+
+.custom-recommend-title.custom-title-line:before,
+.custom-recommend-title.custom-title-line:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 8%;
+    height: 0;
+    left: 60%;
+    border-top: 1px solid #000;
+}
+
+.custom-recommend-title.custom-title-line:after {
+    left: 32%;
+}
+
+.custom-full-width-list-box {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.custom-full-width-list-box .custom-brand-item:first-child {
+    padding-top: 0;
+}
+
+.custom-full-width-list-box .custom-brand-item:last-child {
+    border-bottom: 0;
+}
+
+.custom-brand-item {
+    padding-bottom: 0.7rem;
+}
+
+
+.custom-brand-item .custom-brand-info {
+    width: 9.16rem;
+    position: relative;
+    margin-top: 0.24rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.custom-brand-info .custom-brand-desc {
+    height: 0.44rem;
+    line-height: 0.45rem;
+    font-size: 0.36rem;
+}
+
+.custom-brand-info .custom-brand-price {
+    margin-top: 0.2rem;
+    font-size: 0.46rem;
+    font-weight: 700;
+    color:#000;
+}
+
+.custom-brand-price span {
+    font-size: 0.5rem;
+    color:#1d1d1d;
+}
+
+.custom-brand-info .custom-brand-num,
+.custom-brand-info .custom-action {
+    position: absolute;
+}
+
+.custom-brand-info button {
+    position: absolute;
+    right: 0;
+    bottom: 0.08rem;
+    width: 1.6rem;
+    height: 0.666rem;
+    line-height: 0.42rem; 
+}
+
+/*** 单个商品  grid ***/
+.custom-cell{
+    width: 2.93rem;
+    /* height: 4.93rem; */
+    padding: 0 !important;
+    background-color: #fff !important;
+}
+.custom-cell:nth-child(3n){
+    margin-right: 0 !important;
+}
+.custom-cell .custom-cell-content{
+    font-size: 0.346rem;
+}
+.custom-cell .custom-cell-content
+.custom-cell .describe{
+    font-size: 0.346rem;
+}
+.custom-list-box .monthly-price,
+.custom-cell .custom-cell-content .monthly-price{
+    font-family: MarkPro-Bold;
+}
+.custom-cell .custom-cell-content small.scale{
+    font-size:0.24rem;
+}
+.custom-list-box .custom-pink small,
+.custom-cell .custom-cell-content small{
+    margin-right: 0.04rem;
+}
+.custom-cell .custom-cell-content small:nth-of-type(2){
+    margin-left: 0.3rem;
+    color: #a6a6a6;
+}
+.custom-list-box .custom-pink,
+.custom-cell .custom-cell-content .custom-pink{
+    font-size: 0.346rem;
+    position: relative;
+}
+.mode-2 .custom-cell .custom-cell-content .custom-pink small:nth-of-type(2) {
+    position: absolute;
+    top: 0.06rem;
+    right: 0;
+}
+.custom-list-box .custom-pink small,
+.custom-cell .custom-cell-content .custom-pink small:first-child{
+    margin-left: 0.08rem;
+    font-weight: 700;
+}
+.custom-list-box .custom-pink span,
+.custom-cell .custom-cell-content .custom-pink span{
+    margin-right: 0.1rem;
+    line-height: 1;
+}
+.custom-cell .custom-cell-content .monthly-price{
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    top: 0.02rem;
+}
+.custom-list-box .position-bottom{
+    bottom: 0.26rem;
+    width: 85%;
+}
+
+
+/*** 单个商品  cell横向 ***/
+
+.mode2-box .custom-list-pic {
+    margin-right: 0.293rem;
+}
+.mode2-box .custom-brand-info{
+    width: calc(10rem - 3.6rem);
+}
+.mode2-box .custom-list-edit .custom-brand-info{
+    width: calc(10rem - 4rem);
+}
+.mode2-box .custom-list-box .custom-brand-info h3{
+    line-height: 1.3;
+}
+.mode2-box .custom-brand-info h3+p{
+    margin:0.1rem 0;
+}
+.mode2-box .custom-brand-info .badges-box{   
+    padding-bottom: 0.24rem;
+}
+.mode2-box .custom-brand-info .badges-box .mui-badge{                
+    line-height: 12px;
+}
+
+/*** 一行显示2个 ***/
+
+.mode-2.mui-table-view:before, .mode-2.mui-table-view:after{
+    background-color: transparent;
+}
+.mode-2.mui-table-view.mui-grid-view{
+    padding: 0;
+}
+.mode-2 .custom-cell{
+    width: 4.933rem;
+    /* height: auto; */
+    height: 7.8rem;
+}
+.mode-2.mui-table-view.mui-grid-view .mui-table-view-cell.custom-cell{
+    text-align: left;   
+    margin-bottom: 0.13rem; 
+}
+.mode-2.mui-table-view.mui-grid-view .mui-table-view-cell.custom-cell .mui-media-object{
+    padding: 0.106rem 0.266rem 0.133rem 0.173rem;
+}
+.mode-2 .custom-cell:nth-child(2n){
+    float:right;
+}
+.mode-2 .custom-cell .custom-cell-content{
+    padding:0.24rem 0.26rem 0.24rem 0.34rem;
+
+}
+.mode-2 .custom-cell .custom-cell-content .pos-bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0.26rem;
+    left: 0.34rem;
+}
+.mode-2 .custom-cell .custom-cell-content .describe{
+    padding-right: 0.13rem;
+    color:#222;
+    font-size: 0.373rem;
+    line-height: 1.3;
+}
+.mode-2 .custom-cell .custom-cell-content .custom-pink small:nth-of-type(2){
+    font-size: 0.293rem;
+}
+.mode-2 .custom-gray{
+    margin-top:0.2rem;
+    margin-bottom: 0.16rem;
+     
+}
+
+/*** 推荐 ***/
+.mode-2.recommend-box .custom-gray{
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+
+.recommend-box .custom-light-gray{
+    float:right;
+}
+/*** 优惠券 ***/
+.mui-popover.mui-popover-action .mui-table-view small{
+    display: inline-block;
+}
+.coupon-box .mui-table-view{
+    padding: 0 0.53rem;
+}
+.coupon-box .mui-table-view .mui-table-view-cell{
+    padding: 0.3rem 0;
+    text-align: left;
+}
+.coupon-box h3 span{
+    font-family: DIN-Medium;
+}
+.coupon-box h3,
+.coupon-box p samll{
+    font-size: 0.32rem;
+}
+.coupon-box .custom-pink h3 span:nth-of-type(1),
+.coupon-box .custom-pink p span{
+    color:#f22d47;
+}
+.coupon-box .custom-light-gray h3,
+.coupon-box .custom-light-gray p *,
+.coupon-box .custom-light-gray p small{
+    color:#A6A6A6 !important;
+}
+.coupon-box .mui-table-view small{
+    display: inline-block;
+    margin-left: 0.3rem;
+}
+.coupon-box p:nth-of-type(1){
+    font-size: 0.346rem;
+    line-height: 2.2;
+}
+.coupon-box p:nth-of-type(2){
+    line-height: 1;
+}
+.coupon-box .mui-table-view p small{
+    margin-left: 0.26rem;
+    color:#444;
+}
+.coupon-box button.mui-btn{
+    right:0;
+    width: 1.84rem;
+    height: 0.826rem;
+    color: #fff;
+    border-radius:999px;
+    border: none;
+}
+.coupon-box .mui-btn.custom-btn-gradient:enabled:active{
+    color:#fff !important;
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #F85921 , #FFA200);
+    background: -o-linear-gradient(right, #F85921 , #FFA200);
+    background: linear-gradient(to right, #F85921 , #FFA200);
+}
+.coupon-box .mui-btn.custom-bg-light-gray:enabled:active{
+    color:#fff !important;
+    background-color: #D0D0D0;
+}
+.coupon-box .mui-btn:disabled{
+    opacity: 1;
+}
+
+
+.mui-radio input[type=radio].custom-radio-st:before{
+    content: '\e411' !important;
+    color:#d6d6d6 !important;
+}
+
+
+.custom-flex {
+    display: flex !important;
+    box-sizing: border-box;
+} 
+.custom-flex-c{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.custom-flex-hbetween{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.custom-flex-hc{
+    justify-content: space-around;
+}
+.custom-flex-hc{
+    justify-content: space-around;
+}
+.custom-flex-vc{
+    align-items: center;
+}
+.custom-flex-between{
+    justify-content: space-between;
+}
+
+
+
+/* =================================================== 顶部title =============================================*/
+
+.custom-page-nav {
+    height: 1.2rem;
+    padding: 0 0.346rem;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+    background: #fff !important;
+}
+.mui-bar-nav~.mui-content .mui-slider.mui-fullscreen{
+    top:1.25rem;
+}
+.custom-page-nav .mui-title {
+    line-height: 1.25rem;
+}
+.custom-page-nav input[type=search] {
+    padding: 0;
+    margin: 0.16rem 0;
+    padding-left: 0.6rem;
+    font-size: 0.32rem;
+    text-align: left;
+    vertical-align: top;
+    background-color: rgba(244,245,250,1);
+}
+
+.mui-bar .mui-btn-link.mui-active, .mui-bar .mui-btn-link:active{
+    border:none;
+    color:#8f8f94;
+}
+
+.custom-page-nav .mui-btn-link {
+    line-height: 100%;
+    height: 100%;
+    margin-left: 0 !important;
+    padding: 0 0.3rem;
+    font-size: 0.36rem;
+    color: #8f8f94;                
+}
+
+.custom-bt{
+    padding: 0.14rem 0.3rem;
+    color:#222;
+}
+
+/* 订单详情的状态样式 */
+
+.custom-refunds-status {
+    position: relative;
+    height: 2.533rem;
+    padding-left: 0.8rem;
+    background: url(../images/order_bg.png);
+    background-size: cover;
+}
+
+ .custom-refunds-status h3 {
+    color: #fff;
+}
+
+/* ======================================================= 商品列表 ===================================================*/
+
+.custom-list-box {
+    width: 100%;
+}
+
+.custom-list-box .custom-list-pic {
+    margin-right: 0.4rem;
+}
+
+.custom-list-box .custom-brand-info {
+    width: calc(10rem - 5rem);
+    flex: 1;   
+}
+.custom-list-box .custom-brand-info h3 {
+    font-size: 0.373rem;
+    line-height: 1.5;
+    color: #292929;
+}
+.custom-list-box .custom-brand-info .custom-brand-desc {
+    margin-bottom: 0.2rem;
+    margin-top: 0.1rem;
+}
+
+.custom-list-box .right-info{
+    padding: 0.38rem;
+    position: absolute;
+    right: -0.2rem;
+    bottom: -0.36rem;
+}
+.custom-list-box .custom-brand-info small:nth-of-type(2){
+    margin-left:0.38rem;
+}
+
+.custom-brand-num {
+    bottom: 0;
+    right: 0;
+    color: #8f8f94;
+}
+/* ================================================ 列表导航 ======================================*/
+
+.custom-list-swipe-wrapper .mui-table-view:after,
+.custom-list-swipe-wrapper .mui-table-view:before{
+    background-color: #f5f5f5 !important;
+}
+.custom-list-wrapper .mui-table-view:after,
+.custom-list-wrapper .mui-table-view:before {
+    background-color: #fff;
+}
+
+.custom-list-swipe-wrapper li,
+.custom-list-wrapper li {
+    font-size: 0.4rem;
+    padding: 0.4rem 0.346rem !important;
+}
+
+
+
+.custom-list-wrapper li a {
+    font-size: 0.426rem;
+    margin: -0.34rem -0.2rem !important;
+    margin-right: -0.5rem !important;
+}
+
+.mui-navigate-right .mui-pull-right {
+    margin-right: 0.64rem;
+    font-size: 0.346rem;
+    color: #A6A6A6;
+}
+
+.mui-table-view-cell.mui-active,
+.mui-table-view-cell.mui-active>.mui-slider-handle,
+.mui-table-view-cell>a:not(.mui-btn).mui-active {
+    background-color: transparent !important;
+}
+
+
+
+/* 带input控件的列表 */
+
+.mui-checkbox input[type=checkbox]:checked:before,
+.mui-radio input[type=radio]:checked:before {
+    color: #FF7E00;
+}
+
+/* checkbox */
+
+.custom-pay-bar .mui-checkbox input[type=checkbox] {
+    position: initial;
+}
+
+.custom-pay-bar .mui-checkbox input[type=checkbox]:before {
+    font-size: 0.6rem;
+}
+
+/* ========================================================= 卡片 =============================================*/
+
+.custom-card-header {
+    height: 1.133rem;
+    padding: 0 0.4rem;
+    line-height: 1.133rem;
+    font-size: 0.34rem;
+    overflow: hidden;
+    border-bottom:1px solid #eee;
+}
+
+.custom-card-header input {
+    vertical-align: middle;
+}
+
+.custom-card-header .right-arrow {
+    height: 0.32rem;
+    width: 0.21rem !important;
+    margin-top: -0.1rem;
+    margin-left: 0.2rem;
+    vertical-align: middle;
+}
+
+.custom-card-header,
+.custom-card-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-line:after,
+.custom-card-header.custom-line:after,
+.custom-card-content.custom-line:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    background-color: #ebebeb;
+}
+
+.custom-card-footer {
+    text-align: right;
+    padding: 0.3rem 0.45rem 0.4rem;
+}
+.custom-card-footer strong{
+    font-size:0.4rem;
+}
+.custom-card-footer p {
+    color: #000;
+    font-size: 0.32rem;
+    margin-bottom: 0.2rem;
+}
+
+.custom-card-item .custom-list-pic {
+    width: 2.4rem !important;
+    height: 2.4rem;
+    margin-right: 0.4rem;
+}
+
+.custom-card-item li{
+    padding: 0.24rem 0.346rem !important;
+}
+.custom-card-item .custom-brand-info h3+p {
+    margin: 0.1rem 0;
+}
+.custom-card-item .custom-brand-info .badges-box {
+    padding-bottom: 0.2rem;
+}
+/* =================================================  popup 消息框  ===================================================*/
+.mui-popup.mui-popup-in{
+    border-radius: 0.106rem;
+}
+.mui-popup-inner,
+.mui-popup .mui-popup-button{
+    border-radius: 0;
+}
+.mui-popup-inner{
+    padding: 0.64rem 0.7rem 0.6rem;
+}
+.mui-popup-buttons{
+    height: 1.386rem;
+}
+.mui-popup .mui-popup-button{
+    height: 1.386rem;
+    line-height: 1.386rem;
+    color: #666666;
+    font-size: 0.4rem;
+}
+.mui-popup .mui-popup-button-bold{
+    color: #FF7E00;
+}
+
+/* ========================================================== dialog 提示框 ==================================================*/
+
+.mui-popup-title {
+    padding: 0.1rem 0;
+    font-size: 0.426rem;
+    color: #444;
+}
+.mui-popup-title+.mui-popup-text{
+    margin: 0.2rem 0 0;
+    color:#A6A6A6;
+    font-size: 0.346rem;
+}
+.mui-popup-button:first-child {
+    border-right: 1px solid #f5f5f5;
+}
+
+.mui-popup-button.mui-popup-button-bold {
+    font-weight: normal;
+}
+
+/* ===========================================================底部导航 =====================================================*/
+
+.mui-bar-tab {
+    height: 1.33rem;
+    background-color: #fafafa;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.mui-bar-tab .mui-tab-item{
+    color:#6A6A6A;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+    color:#FFAA00; 
+}
+/* .mui-bar, */
+
+.mui-bar-tab .mui-tab-item {
+    height: 1.33rem;
+}
+
+.custom-pay-bar.mui-bar {
+    background-color: #fafafa;
+    box-shadow: -4px 0 5px rgba(0, 0, 0, .2);
+    z-index: 11;
+}
+
+.custom-pay-bar.mui-bar {
+    line-height: 1.33rem;
+    padding-left: 0.36rem;
+    font-size: 0.38rem;
+}
+
+.custom-pay-bar.mui-bar a:active {
+    color: #fff;
+}
+
+/****** 暂无数据 ****/
+.page-nodata{
+    padding-top: 3rem;
+}
+
+.custom-empty img {
+    width: 5rem !important;
+}
+.page-nodata img{
+    width: 3rem;
+}
+.page-nodata p,
+.custom-empty p {
+    margin-top: 0.6rem;
+    font-size: 0.34rem;
+}
+
+
+/* ============================================================= 分页器 ==========================================*/
+
+.mui-slider-indicator .mui-indicator{
+    width: 9px;
+    height: 3px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 3px;
+    box-shadow:0 0 0 rgba(0,0,0,0) !important;
+    border-radius: 999px;
+    margin: 0.01rem 0.08rem; 
+}
+.mui-slider-indicator .mui-active.mui-indicator{
+    background: rgba(255,255,255,1);
+}
+.mui-slider-group .mui-scroll-wrapper{
+    padding-bottom:2.9rem !important;
+}
+
+/* ============================================================= 数字输入框控件 ==========================================*/
+
+.mui-numbox {
+    height: 0.586rem;
+    padding: 0 0.586rem;
+    width: 2.186rem;
+    border: none;
+}
+
+.mui-numbox .tep-reduce{
+    width: 0.72rem !important;
+}
+.mui-numbox [class*=btn-numbox],
+.mui-numbox [class*=numbox-btn] {
+    width: 0.69rem;
+    line-height: 5%;
+    color: #646464;
+}
+
+.mui-numbox [class*=btn-numbox],
+.mui-numbox [class*=numbox-btn],
+.mui-numbox [class*=btn-numbox]:active,
+.mui-numbox [class*=numbox-btn]:active {
+    background-color: #fff !important;
+}
+
+.mui-numbox .mui-numbox-input {
+    width: 0.8rem;
+    color: #222;
+    line-height: initial;
+    background-color: #F7F7FA !important;
+}
+.custom-slider-group {
+    position: relative;
+    margin-top: 1.25rem;
+}
+
+
+.mui-numbox [class*=numbox-btn][disabled],
+.mui-numbox [class*=numbox-btn][disabled]:active{
+    background: url(../images/icons/numbox_0.png) no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    color:#ccc;
+}
+.mui-numbox .tep-reduce,
+.mui-numbox [class*=numbox-btn].tep-reduce:active{
+    background: url(../images/icons/numbox_1.png) no-repeat;
+    background-size: 100%;
+}
+.mui-numbox .tep-plus,
+.mui-numbox [class*=numbox-btn].tep-plus:active{
+    background: url(../images/icons/numbox_2.png) no-repeat;
+    background-size: 100%;
+}
+
+/* ======================================================= toast信息提示 =================================================*/
+
+.mui-toast-container {
+    bottom: 50% !important;
+}
+
+.mui-toast-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.4rem;
+
+}
+.mui-toast-message .custom-toast-icon{
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: auto;
+    margin-bottom: 0.3rem;
+}
+
+
+/*  =================================================    view    =================================================*/
+
+
+
+.mui-navbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 44px;
+    background-color: #fff;
+}
+
+.mui-navbar .mui-bar {
+    position: absolute;
+    background: transparent;
+    text-align: center;
+}
+.mui-navbar .mui-bar-nav{
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+
+}
+
+.mui-android .mui-navbar-inner.mui-navbar-left {
+    opacity: 0;
+}
+
+.mui-ios .mui-navbar-left .mui-left,
+.mui-ios .mui-navbar-left .mui-center,
+.mui-ios .mui-navbar-left .mui-right {
+    opacity: 0;
+}
+
+.mui-navbar .mui-btn-nav {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transition-duration: .0s;
+    transition-duration: .0s;
+}
+
+.mui-navbar .mui-bar .mui-title {
+    display: inline-block;
+    width: auto;
+}
+
+.mui-page-shadow {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 16px;
+    height: 100%;
+    z-index: -1;
+    content: '';
+}
+
+.mui-page-shadow {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+}
+
+
+/* ================================================================= 方格 ===================================================*/
+.custom-box-title{
+    height:1rem;
+    line-height: 1rem;
+    font-size:0.4rem;
+    color:#222;
+}
+.custom-box-title p{
+    padding-left: 0.3rem;
+    font-size: 0.38rem;
+}
+
+
+/*弹出框*/
+.mui-poppicker-btn-ok{
+    background: #d54843 !important;
+    border:1px solid #d54843 !important;
+}
+
+/*分页器*/
+.mui-slider-indicator .mui-indicator {
+    box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+}
+
+
+
+/* 容器 */
+.has-foot-bar{
+    padding-bottom:1.33rem;
+}
+
+
+/*弹出框*/
+.mui-popup.copy-popup{
+    background-color: #fff;
+}
+.copy-popup .mui-popup-title {
+    font-size: 0.34rem;
+    color: #6d6d6d;
+}
+.mui-popup.copy-popup .mui-popup-button-bold{
+    border: none;
+    background-color: #fff !important;
+}
+.mui-popup.copy-popup .mui-popup-button{
+    color:#000;
+}
+
+
+
+.mui-pull-caption{
+    color: #A6A6A6;
+    font-size: 0.34rem;
+}

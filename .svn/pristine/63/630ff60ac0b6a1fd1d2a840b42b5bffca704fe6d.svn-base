@@ -1,0 +1,75 @@
+
+
+.page-nodata{
+    position: fixed;
+    top: 1.173rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
+}
+
+.custom-page-nav,
+.custom-box-title{
+    height:1.173rem;
+}
+.mui-bar-nav{
+    box-shadow:0 0 0;
+}
+.mui-bar-nav~.mui-content{
+    padding-top:1.173rem;
+}
+.mui-content.has-footer {
+    padding-bottom: 1.33rem;
+}
+.custom-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.custom-page-title .custom-action-btn {
+    margin-right: 0.36rem;
+}
+
+.custom-pay-footer.mui-bar {
+    padding: 0;
+}
+
+.custom-pay-footer .custom-pay-checkbox {
+    width: 2.4rem;
+    text-align: center;
+}
+
+.mui-table-view-cell{
+    padding: 0.373rem;
+}
+
+.custom-page-title {
+    border-bottom: 1px solid #c8c7cc;
+}
+
+.mui-table-view-cell .mui-checkbox{
+    margin-right: 0.3rem;
+    display: none;
+}
+
+.mode2-box .mui-checkbox input[type=checkbox]:before {
+    font-size: 0.6rem;
+} 
+.mode2-box .custom-list-box .custom-brand-info h3{
+    margin-bottom: 0.16rem;
+}
+
+.custom-empty {
+    position: absolute;
+    z-index: 3;
+    top: 1.25rem;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+}

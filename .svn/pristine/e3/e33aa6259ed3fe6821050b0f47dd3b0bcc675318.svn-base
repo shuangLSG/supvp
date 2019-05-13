@@ -1,0 +1,814 @@
+@font-face {
+    font-family: MarkPro-Bold;
+    src: url("../fonts/MarkPro-Bold.otf");
+}
+.font-MarkPro{
+    font-family: MarkPro-Bold;
+}
+
+
+a,
+a:hover,
+a:active {
+    text-decoration: none !important;
+}
+input::-webkit-input-placeholder {
+    color: #c0c0c0;
+}
+small,.font-Arial{
+    font-family:Arial;
+}
+button:enabled:active {
+    color: #000 !important;
+    background: transparent;
+
+}
+
+.mui-btn-link:enabled:active {
+    border: none !important;
+}
+
+
+.mui-input-group:before,
+.mui-input-group:after,
+.mui-table-view:before,
+.mui-table-view:after {
+    background-color: #f5f5f5;
+}
+
+.mui-input-group .mui-input-row:after,
+.mui-table-view-cell:after {
+    background-color: #ebebeb;
+}
+
+.mui-navigate-right:after {
+    font-size: 0.5rem;
+    top: 50%;
+}
+.mui-badge-red {
+    background-color: #f22d47;
+}
+.mui-badge-warning {
+    background-color: #FF7E00;
+    border-radius: 2px;
+    padding: 0 0.12rem;
+}
+
+.mui-badge-outlined {
+    background-color: transparent;
+}
+
+.mui-btn-warning.mui-btn-outlined:enabled:active,
+.mui-btn-warning.mui-btn-outlined,
+.mui-badge-warning.mui-badge-outlined {
+    color: #FF7E00;
+    border: 1px solid #FF7E00;
+}
+
+.mui-btn-warning.mui-btn-outlined:enabled:active {
+    color: #FF7E00 !important;
+    background-color: transparent !important;
+}
+
+button.custom-btn-gradient:enabled:active,
+.custom-btn-gradient {
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #F85921, #FFA200);
+    background: -o-linear-gradient(right, #F85921, #FFA200);
+    background: linear-gradient(to right, #F85921, #FFA200);
+}
+
+.mui-center {
+    text-align: center;
+}
+
+.custom-around {
+    border-radius: 50%;
+}
+
+/* ======================================================== 按钮 ====================================================*/
+
+.custom-radius {
+    border-radius: 999px;
+}
+
+.custom-btn,
+.custom-danger-btn,
+.custom-default-btn {
+    line-height: 0.42rem;
+    height: 0.666rem;
+    padding: 0.1rem 0.3rem;
+    background-color: transparent;
+}
+
+.text-decoration {
+    text-decoration: line-through;
+}
+
+/* ============================================================ 文本溢出 ==========================================*/
+.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after {
+    background-color: #eee;
+}
+
+.custom-white-space {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.custom-white-space-clamp,
+.mode-2 .custom-cell .custom-cell-content .describe {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.custom-margin-top-20 {
+    margin-top: 0.3rem;
+}
+
+.custom-margin-top-30 {
+    margin-top: 0.4rem;
+}
+
+.custom-bg-color-gray {
+    background-color: rgba(249, 249, 252, 1);
+}
+
+.custom-margin-right-16 {
+    margin-right: 0.2rem;
+}
+
+.custom-bg-color-white {
+    background-color: #fff !important;
+}
+
+.custom-bg-light-gray {
+    background-color: #D0D0D0;
+}
+
+
+/* 字体颜色 */
+.custom-pink {
+    color: #f22d47 !important;
+}
+.custom-orange{
+    color: #FF7E00 !important;
+}
+
+.custom-light-gray {
+    color: #A6A6A6;
+}
+
+.custom-gray {
+    color: #666;
+}
+
+
+
+/* 字体大小 */
+
+.text-size-38 {
+    /* 38/2 */
+    font-size: 0.5rem;
+}
+
+.text-size-24 {
+    font-size: 0.64rem !important;
+}
+
+.text-size-20 {
+    font-size: 0.53rem;
+}
+
+.text-size-18 {
+    font-size: 0.48rem;
+}
+
+.text-size-17 {
+    font-size: 0.453rem;
+}
+
+.text-size-16 {
+    font-size: 0.426rem;
+}
+
+.text-size-15 {
+    font-size: 0.4rem !important;
+}
+
+.text-size-14 {
+    font-size: 0.37rem;
+}
+
+.text-size-13 {
+    font-size: 0.346rem !important;
+}
+
+.text-size-12 {
+    font-size: 0.32rem;
+}
+
+.text-size-11 {
+    font-size: 0.293rem !important;
+}
+
+/* 页面布局 */
+
+.page-section-30 {
+    padding: 0 .4rem;
+}
+
+.module .module-hd {
+    height: 1.4rem;
+    font-size: 0.45rem;
+    color: #222;
+}
+
+.pull-right {
+    float: right;
+}
+
+.hide,
+.hide.custom-flex {
+    display: none !important;
+}
+
+
+/* =======================================================自定义popver 底部弹出框 =======================================================*/
+.mui-popover.custom-popover .mui-card {
+    box-shadow: 0 0 0;
+}
+
+.mui-popover.custom-popover .mui-table-view {
+    background: #fff;
+    padding: 0 0.4rem;
+    color: #444;
+    margin: 0;
+}
+
+.mui-popover.custom-popover .mui-card {
+    margin: 0;
+}
+
+.mui-popover.custom-popover .mui-card-header {
+    font-size: 0.453rem;
+    padding: 0.4rem 0.16rem;
+    font-weight: 700;
+}
+
+.mui-popover.custom-popover .mui-card-header .mui-icon {
+    position: absolute;
+    right: 0.16rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.mui-popover.custom-popover .mui-card-header:after {
+    background-color: #f5f5f5;
+}
+
+.mui-popover.custom-popover .mui-table-view.mui-grid-view .mui-table-view-cell {
+    display: block;
+}
+
+.mui-popover.custom-popover .mui-card-content-inner {
+    padding: 0;
+}
+
+.mui-popover.custom-popover .mui-card-content-inner .content-wrapper {
+    max-height: 10rem;
+    min-height: 5.3rem;
+    overflow: auto;
+}
+
+
+.mui-popover.custom-popover .mui-scroll-wrapper,
+.mui-popover.custom-popover.mui-popover.custom-popover-action .mui-table-view,
+.mui-popover.custom-popover.mui-popover.custom-popover-action .mui-table-view.mui-grid-view .mui-table-view-cell {
+    margin: 0;
+}
+
+
+
+/*** 单个商品  grid ***/
+.custom-cell {
+    width: 2.93rem;
+    height: 4.93rem;
+    padding: 0 !important;
+    background-color: #fff !important;
+}
+
+.custom-cell:nth-child(3n) {
+    margin-right: 0 !important;
+}
+
+.custom-cell .custom-cell-content {
+    font-size: 0.346rem;
+}
+
+.custom-cell .custom-cell-content .custom-cell .describe {
+    font-size: 0.346rem;
+}
+
+.custom-list-box .monthly-price,
+.custom-cell .custom-cell-content .monthly-price {
+    font-family: MarkPro-Bold;
+}
+
+.custom-cell .custom-cell-content small.scale {
+    transform: scale(0.6);
+}
+
+.custom-list-box .custom-pink small,
+.custom-cell .custom-cell-content small {
+    margin-right: 0.08rem;
+}
+
+.custom-cell .custom-cell-content small:nth-of-type(2) {
+    margin-left: 0.3rem;
+    color: #a6a6a6;
+}
+
+.custom-list-box .custom-pink,
+.custom-cell .custom-cell-content .custom-pink {
+    font-size: 0.346rem;
+}
+
+.custom-list-box .custom-pink small,
+.custom-cell .custom-cell-content .custom-pink small {
+    margin-left: 0.08rem;
+}
+
+.custom-list-box .custom-pink span,
+.custom-cell .custom-cell-content .custom-pink span {
+    margin-right: 0.1rem;
+    line-height: 1;
+}
+
+.custom-cell .custom-cell-content .monthly-price {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    top: 0.02rem;
+}
+
+/*** 单个商品  cell横向 ***/
+
+.mode2-box .custom-list-pic {
+    margin-right: 0.293rem;
+}
+
+.mode2-box .custom-brand-info {
+    width: calc(10rem - 3.6rem);
+}
+
+.mode2-box .custom-list-edit .custom-brand-info {
+    width: calc(10rem - 4rem);
+}
+
+.mode2-box .custom-list-box .custom-brand-info h3 {
+    line-height: 1;
+}
+
+.mode2-box .custom-brand-info h3+p {
+    margin: 0.1rem 0;
+}
+
+.mode2-box .custom-brand-info .badges-box {
+    padding-bottom: 0.24rem;
+
+    /* padding-bottom: 0.32rem; */
+}
+
+.mode2-box .custom-brand-info .badges-box .mui-badge {
+    line-height: 1.3;
+}
+
+/*** 一行显示2个 ***/
+
+.mode-2.mui-table-view:before,
+.mode-2.mui-table-view:after {
+    background-color: transparent;
+}
+
+.mode-2.mui-table-view.mui-grid-view {
+    padding: 0;
+}
+
+.mode-2 .custom-cell {
+    width: 4.933rem;
+    height: auto;
+}
+
+.mode-2.mui-table-view.mui-grid-view .mui-table-view-cell.custom-cell {
+    text-align: left;
+    margin-bottom: 0.13rem;
+}
+
+.mode-2.mui-table-view.mui-grid-view .mui-table-view-cell.custom-cell .mui-media-object {
+    padding: 0.106rem 0.266rem 0.133rem 0.173rem;
+}
+
+.mode-2 .custom-cell:nth-child(2n) {
+    float: right;
+}
+
+.mode-2 .custom-cell .custom-cell-content {
+    padding: 0.24rem 0.26rem 0.24rem 0.34rem;
+
+}
+
+.mode-2 .custom-cell .custom-cell-content .describe {
+    padding-right: 0.13rem;
+    color: #222;
+    font-size: 0.373rem;
+    line-height: 1.3;
+}
+
+.mode-2 .custom-cell .custom-cell-content .custom-pink small:nth-of-type(2) {
+    font-size: 0.293rem;
+}
+
+.mode-2 .custom-gray {
+    margin-top: 0.2rem;
+    margin-bottom: 0.16rem;
+
+}
+
+
+
+/*** 优惠券 ***/
+.mui-popover.mui-popover-action .mui-table-view small {
+    display: inline-block;
+}
+
+.coupon-box .mui-table-view {
+    padding: 0 0.53rem;
+}
+
+.coupon-box .mui-table-view .mui-table-view-cell {
+    padding: 0.3rem 0;
+    text-align: left;
+}
+
+.coupon-box h3 span {
+    font-family: SFU DIN MitAlt;
+}
+
+.coupon-box h3,
+.coupon-box p samll {
+    font-size: 0.32rem;
+}
+
+.coupon-box .custom-pink h3 span:nth-of-type(1),
+.coupon-box .custom-pink p span {
+    color: #f22d47;
+}
+
+.coupon-box .custom-light-gray h3 span:nth-of-type(1),
+.coupon-box .mui-table-view .custom-light-gray p,
+.coupon-box .mui-table-view .custom-light-gray p small {
+    color: #A6A6A6 !important;
+}
+
+.coupon-box .mui-table-view small {
+    display: inline-block;
+    margin-left: 0.3rem;
+}
+
+.coupon-box p:nth-of-type(1) {
+    font-size: 0.346rem;
+    line-height: 2.2;
+}
+
+.coupon-box p:nth-of-type(2) {
+    line-height: 1;
+}
+
+.coupon-box .mui-table-view p small {
+    margin-left: 0.26rem;
+    color: #444;
+}
+
+.coupon-box button.mui-btn {
+    right: 0;
+    width: 1.84rem;
+    height: 0.826rem;
+    color: #fff;
+    border-radius: 999px;
+    border: none;
+}
+
+.coupon-box .mui-btn.custom-btn-gradient:enabled:active {
+    color: #fff !important;
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #F85921, #FFA200);
+    background: -o-linear-gradient(right, #F85921, #FFA200);
+    background: linear-gradient(to right, #F85921, #FFA200);
+}
+
+.coupon-box .mui-btn.custom-bg-light-gray:enabled:active {
+    color: #fff !important;
+    background-color: #D0D0D0;
+}
+
+.coupon-box .mui-btn:disabled {
+    opacity: 1;
+}
+
+
+
+
+
+.custom-flex {
+    display: flex !important;
+    box-sizing: border-box;
+}
+
+.custom-flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-flex-hbetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-flex-hc {
+    justify-content: space-around;
+}
+
+.custom-flex-hc {
+    justify-content: space-around;
+}
+
+.custom-flex-vc {
+    align-items: center;
+}
+
+
+
+
+
+
+
+/* ======================================================= 商品列表 ===================================================*/
+
+.custom-list-box {
+    width: 100%;
+}
+
+.custom-list-box .custom-list-pic {
+    margin-right: 0.4rem;
+}
+
+.custom-list-box .custom-brand-info {
+    width: calc(10rem - 4rem);
+    flex: 1;
+}
+
+.custom-list-box .custom-brand-info h3 {
+    font-size: 0.373rem;
+    line-height: 1.5;
+    color: #292929;
+}
+
+.custom-list-box .custom-brand-info .custom-brand-desc {
+    margin-bottom: 0.2rem;
+    margin-top: 0.1rem;
+}
+
+.custom-list-box .right-info {
+    padding: 0.38rem;
+    position: absolute;
+    right: -0.2rem;
+    bottom: -0.36rem;
+}
+
+.custom-list-box .custom-brand-info small:nth-of-type(2) {
+    margin-left: 0.38rem;
+}
+
+.custom-brand-num {
+    bottom: 0;
+    right: 0;
+    color: #8f8f94;
+}
+
+/* ================================================ 列表导航 ======================================*/
+
+.custom-list-swipe-wrapper .mui-table-view:after,
+.custom-list-swipe-wrapper .mui-table-view:before {
+    background-color: #f5f5f5 !important;
+}
+
+.custom-list-wrapper .mui-table-view:after,
+.custom-list-wrapper .mui-table-view:before {
+    background-color: #fff;
+}
+
+.custom-list-swipe-wrapper li,
+.custom-list-wrapper li {
+    font-size: 0.4rem;
+    padding: 0.4rem 0.346rem !important;
+}
+
+
+
+.custom-list-wrapper li a {
+    font-size: 0.426rem;
+    margin: -0.34rem -0.2rem !important;
+    margin-right: -0.5rem !important;
+}
+
+.mui-navigate-right .mui-pull-right {
+    margin-right: 0.64rem;
+    font-size: 0.346rem;
+    color: #A6A6A6;
+}
+
+.mui-table-view-cell.mui-active,
+.mui-table-view-cell.mui-active>.mui-slider-handle,
+.mui-table-view-cell>a:not(.mui-btn).mui-active {
+    background-color: transparent !important;
+}
+
+
+
+/* ========================================================= 卡片 =============================================*/
+
+.custom-card-header {
+    height: 1.133rem;
+    padding: 0 0.4rem;
+    line-height: 1.133rem;
+    font-size: 0.34rem;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-card-header input {
+    vertical-align: middle;
+}
+
+.custom-card-header .right-arrow {
+    height: 0.32rem;
+    width: 0.21rem !important;
+    margin-top: -0.1rem;
+    margin-left: 0.2rem;
+    vertical-align: middle;
+}
+
+.custom-card-header,
+.custom-card-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-line:after,
+.custom-card-header.custom-line:after,
+.custom-card-content.custom-line:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    background-color: #ebebeb;
+}
+
+.custom-card-footer {
+    text-align: right;
+    padding: 0.3rem 0.45rem 0.4rem;
+}
+
+.custom-card-footer strong {
+    font-size: 0.4rem;
+}
+
+.custom-card-footer p {
+    color: #000;
+    font-size: 0.32rem;
+    margin-bottom: 0.2rem;
+}
+
+.custom-card-item .custom-list-pic {
+    width: 2.4rem !important;
+    height: 2.4rem;
+    margin-right: 0.4rem;
+}
+
+.custom-card-item .badges-box .mui-badge {
+    line-height: 1.3;
+}
+
+.custom-card-item li {
+    padding: 0.24rem 0.346rem !important;
+}
+
+.custom-card-item .custom-brand-info h3+p {
+    margin: 0.1rem 0;
+}
+
+.custom-card-item .custom-brand-info .badges-box {
+    padding-bottom: 0.2rem;
+}
+
+
+
+/* ============================================================= 数字输入框控件 ==========================================*/
+
+.mui-numbox {
+    height: 0.586rem;
+    padding: 0 0.586rem;
+    width: 2.186rem;
+    border: none;
+}
+
+.mui-numbox .tep-reduce{
+    width: 0.72rem !important;
+}
+.mui-numbox [class*=btn-numbox],
+.mui-numbox [class*=numbox-btn] {
+    width: 0.69rem;
+    line-height: 5%;
+    color: #646464;
+}
+
+.mui-numbox [class*=btn-numbox],
+.mui-numbox [class*=numbox-btn],
+.mui-numbox [class*=btn-numbox]:active,
+.mui-numbox [class*=numbox-btn]:active {
+    background-color: #fff !important;
+}
+
+.mui-numbox .mui-numbox-input {
+    width: 0.8rem;
+    color: #222;
+    line-height: initial;
+    background-color: #F7F7FA !important;
+}
+.custom-slider-group {
+    position: relative;
+    margin-top: 1.25rem;
+}
+
+
+.mui-numbox [class*=numbox-btn][disabled],
+.mui-numbox [class*=numbox-btn][disabled]:active{
+    background: url(../images/icons/numbox_0.png) no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    color:#ccc;
+}
+.mui-numbox .tep-reduce,
+.mui-numbox [class*=numbox-btn].tep-reduce:active{
+    background: url(../images/icons/numbox_1.png) no-repeat;
+    background-size: 100%;
+}
+.mui-numbox .tep-plus,
+.mui-numbox [class*=numbox-btn].tep-plus:active{
+    background: url(../images/icons/numbox_2.png) no-repeat;
+    background-size: 100%;
+}
+
+/* ======================================================= toast信息提示 =================================================*/
+
+.mui-toast-container {
+    bottom: 50% !important;
+}
+
+
+
+
+/*分页器*/
+.mui-slider-indicator .mui-indicator {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+
+
+
+/*弹出框*/
+.mui-popup.copy-popup {
+    background-color: #fff;
+}
+
+.copy-popup .mui-popup-title {
+    font-size: 0.34rem;
+    color: #6d6d6d;
+}
+
+.mui-popup.copy-popup .mui-popup-button-bold {
+    border: none;
+    background-color: #fff !important;
+}
+
+.mui-popup.copy-popup .mui-popup-button {
+    color: #000;
+}

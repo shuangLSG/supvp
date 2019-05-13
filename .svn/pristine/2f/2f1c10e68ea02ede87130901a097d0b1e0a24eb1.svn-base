@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>砍价免费拿</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>public/css/mui.min.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="<?= base_url() ?>public/css/app.css" /> -->
+        
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>public/css/bargaibcdetail.css">
+    </head>
+
+    <body>
+        <div id="scroll" class=" mui-content custom-bg-color-gray page-scroll-wrapper">
+            <section>
+                <input type="hidden" value="<?= $id ?>" id="goodsid">
+                <div class="custom-banner custom-bg-color-white">
+                    <div id="bannerSlider" class="mui-slider">
+
+                        <!--显示轮播图内容-->
+
+                    </div>
+                </div>
+
+                <section class="introduce page-section-30">
+                    <h2 class="font-red">
+                        <strong id="people" class="">0</strong>
+                        <span>已免费拿</span>
+                        <span class="font-gray">价值<span id="goodsprice"></span> 元</span>
+                    </h2>
+                    <div class="introduce-title  custom-light-gray" id="goodsname">
+                        <h4 class="text-size-16"><strong> <!-- goods name --> </strong></h4>
+                         <p class="text-size-12"><!-- goods title --></p>
+                    </div>
+                    <div class="custom-margin-top-20">
+                        <ul class="mini-monthly-supply">
+                            <li class="custom-flex custom-flex-vc">
+                                <a href="#stage" id="openPopover" class="stage-spec custom-flex custom-flex-vc">
+                                    <div class="custom-flex custom-flex-vc">
+                                        <span class="mui-badge mui-badge-red text-size-13">12期</span>
+                                        <span class="custom-flex custom-flex-vc custom-pink text-size-14">月供<small class="text-size-14">&yen;</small><span class="monthly-price font-MarkPro text-size-20">0</span></span>
+                                    </div> 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </section>
+                <div class="promise-box page-section-30 custom-bg-color-white custom-flex-hbetween">
+                    <img src="<?= base_url() ?>public/images/goodsDetail/gs_1.png" alt="">
+                    <img src="<?= base_url() ?>public/images/goodsDetail/gs_2.png" alt="">                        
+                    <img src="<?= base_url() ?>public/images/goodsDetail/gs_3.png" alt="">
+                </div>
+
+                <div class="custom-list-wrapper goods-info-wrapper custom-margin-top-20">
+                    <ul  class="mui-table-view">
+                        <li  class="mui-table-view-cell">
+                            <a href="#goodstype" id="openTypePopover" class="custom-flex mui-navigate-right">
+                                <span class="custom-gray-8 text-size-13">选择</span>  
+                                <div data-cartnum="1" class="allSelect-box text-size-13">
+                                    <!--goodstype <strong>黑色</strong>  
+                                    <strong>64G内存</strong>  
+                                    <strong>全网通</strong>                                       -->
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <a href="#coupon" id="openCouponPopover" class="custom-flex mui-navigate-right">
+                                <span class="custom-gray-8 text-size-13">领券</span> 
+                                <div class="preferential-box">
+                                    <!-- <span class="mui-badge-warning mui-badge-outlined text-size-12">每满100-50</span>   -->
+                                </div> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                               
+                <section id="" class="goods-info-wrapper everybody-watching-box custom-margin-top-20">
+                    <h3 class="text-size-17 custom-flex-hbetween">
+                        <strong>大家都在看</strong>
+                        <div class="custom-flex custom-flex-vc">
+                            <span id="seeMore" class="text-size-12 custom-gray-8">查看更多</span>
+                            <i class="mui-icon  mui-icon-arrowright"></i>  
+                        </div>
+                    </h3>
+                    <div id="slider" class="mui-slider custom-bg-color-white">
+                        <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                            <div class="mui-scroll custom-flex">
+
+                                <!--横向滑动列表-->
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="detail" class="goods-detail goods-info-wrapper page-section-30 custom-margin-top-20">
+                    <h3 class="text-size-17"><strong>商品详情</strong></h3>
+                    <div class="detail-spec">
+                        
+                        <!--商品详情-->
+
+                    </div>
+                    <div class="detail-img">
+                        
+                        <!--商品详情img-->
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        
+       
+      
+      
+        <!-- 底部导航条 -->
+        <nav id="footer" class="mui-bar mui-bar-tab custom-bar custom-flex">
+            <div class="btn-wrapper custom-flex">
+                <a class="addCart custom-btn custom-black-btn custom-orange-gradient mui-pull-right">
+                    <span>加入购物袋</span>
+                </a>
+                <a class="addPay custom-btn custom-default-btn-fill custom-carmine-gradient mui-pull-right" href="javascript:;">
+                    <span>立即购买</span>
+                </a>
+            </div>
+        </nav>
+
+      
+                        
+    
+        <!-- banner -->            
+        <script  id="banner_tpl" type="text/html">
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="mui-center">
+                        <img src="{{d[d.length-1]+zip}}750">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                {{each d i index}}
+                    <div class="mui-slider-item">
+                        <a href="#" class="mui-center">
+                            <img src="{{i+zip}}750">
+                        </a>
+                    </div>
+                {{/each}}
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="mui-center">
+                        <img src="{{d[0]+zip}}750">
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-number mui-text-center">
+                    <span>1</span> / {{d.length}}
+                </div>
+            </div>
+        </script>
+    
+        <!-- 大家都在看 -->
+        <script id="slider_tpl" type="text/html">
+            {{each d i index}}
+                <a id="item_{{i.id}}" class="mui-control-item custom-cell" >
+                    <img src="{{i.img_750_1050+zip}}180">
+                    <div class="custom-cell-content">
+                        <p class="describe custom-white-space-clamp text-size-11">{{i.name}}</p>
+                        <p class="custom-pink text-size-11">月供<small>&yen;</small><span class="monthly-price text-size-17">{{i.amortize}}</span></p>
+                    </div>
+                </a>
+            {{/each}}
+        </script>
+
+        <script>
+           var collectImg ='<?= base_url() ?>public/images/icons/det_1_active.png';
+        </script>
+
+        <script src="<?= base_url() ?>public/js/app.js" type="text/javascript"></script>
+        <script src="<?= base_url() ?>public/js/template.js"></script> 
+        <script src="<?= base_url() ?>public/js/rem.js" type="text/javascript"></script>
+        <script src="<?= base_url() ?>public/js/jquery.min.js"></script>
+        <script src="<?= base_url() ?>public/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+        $(function () {
+
+            mui.init();
+            (function (mui, $) {
+
+
+                /** 
+                 * 商品列表展示
+                 * commodityid   商品id
+                 * bargainid     砍价id
+                */
+
+                var id = GetQueryString('bargainactivityid'),
+                commodityid = GetQueryString('commodityid');
+                $.post('../bargainh5/detail', {
+                        'bargainactivityid':id,
+                        'commodityid':commodityid
+                    }, function (res) {
+                        if (res.s == 200) {
+                            var data = res.d;
+                            // 轮播图
+                            $('#bannerSlider').html(template('banner_tpl', {
+                                d: data.imgs,
+                                zip: zip
+                            })); 
+
+                            // 详情
+                            goodsDetail(data);
+
+                            $.each(allData,function(i,item){
+                                var bargainprice = isNum2((Number(item.oldprice) - Number(item.newprice))),
+                                    percent = (bargainprice/item.oldprice*100).toFixed(2)+'%';
+                                
+                                item.bargainprice = bargainprice;
+                                item.percent = percent;
+                            });
+                            
+                            // 本人信息 
+                            $('#head-icon').attr({'src':data.info.userphoto});
+                            $('#phone').text(data.info.mobile);
+                            
+                            $('#infotitle').after(template('card_tpl',{d:data.going,zip:zip,state:'going'}));
+                            $('#infotitle').after(template('card_tpl',{d:data.finish,zip:zip,state:'finish'}));
+                            $('.main-content').append(template('card_tpl',{d:data.past,zip:zip,state:'past'}));
+
+                            var $times = $('.countDownTime-box');
+                            $.each($times,function(i,item){
+                                var state = $(item).closest('.mui-card').attr('data-state'),// 商品状态
+                                    index = $(item).attr('data-index');// 对应不同状态下数据的索引
+                                if(state=='finish'){
+                                    var finish = res.d.finish;
+                                    setTimer(finish[index],$(item));
+                                }else if(state =='going'){
+                                    var going = res.d.going;
+                                    setTimer(going[index],$(item));
+                                }
+                            })
+                            
+                        }
+
+                }, 'json');
+
+
+                //  商品详情
+                function goodsDetail(data) {
+                    // 价格
+                    $('#people').text(data.sales);
+                    $('#goodsprice').html(data.price);
+
+                    // 名称
+                    $('#goodsname').find('strong').text(data.name).end().find('p').text(data.title);
+
+                    //商品信息
+                    $('#detail .detail-spec').html(data.cinfo);
+                 
+                }
+
+                // 展示地址的弹框
+                mui('.main-content').on('tap','.add-address',function(){
+                    var bargainid = $(this).closest('li').attr('data-bargainid');
+                    mui('#address_popover').popover('show');
+                    $('#address_popover').attr('data-bargainid',bargainid);
+                });
+                mui('#address_popover').on('tap','.to-addaddress',function(){
+                    mui.openWindow({ 
+                        url: '../supvp/editAddress'
+                    });
+                });
+       
+             
+            
+                mui('.mui-scroll-wrapper').scroll({
+                    deceleration: 0.0005
+                });
+
+            })(mui, jQuery);
+            })
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,307 @@
+a:hover,
+a:active {
+    text-decoration: none !important;
+}
+.custom-flex {
+    display: flex;
+}
+.custom-radius{
+    border-radius:999px;
+}
+.custom-orange {
+    color: #FF7E00;
+}
+.custom-yellow{
+    color: #F8B500;
+}
+.custom-black-2 {
+    color: #222;
+}
+.custom-gray-8 {
+    color: #888;
+}
+
+.page-bg {
+    background-color: #F9F9FC;
+}
+
+.text-size-13 {
+    font-size: 0.346rem !important;
+}
+
+.text-size-12 {
+    font-size: 0.32rem;
+}
+
+.custom-light-gray {
+    color: #A6A6A6;
+}
+.mui-btn-warning.mui-btn-outlined, .mui-badge-warning.mui-badge-outlined {
+    color: #FF7E00;
+    border: 1px solid #FF7E00;
+    background-color: #fff;
+}
+
+.mui-table-view-cell:after,
+.mui-input-group:before,
+.mui-input-group:after,
+.mui-table-view:before,
+.mui-table-view:after {
+    background-color: #f5f5f5;
+}
+
+/* ======================================================= 商品列表 ===================================================*/
+
+.custom-card-header {
+    height: 1.14rem;
+    padding: 0 0.4rem;
+    line-height: 1.133rem;
+    font-size: 0.34rem;
+    overflow: hidden;
+}
+
+.custom-card-item {
+    margin-top: 0.26rem;
+    background-color: #fff;
+    
+}
+
+.custom-card-item li {
+    padding: 0.38rem 0.4rem !important;
+}
+
+.custom-card-item .mui-table-view:before,
+.custom-card-item .mui-table-view-cell:after {
+    left: 0.373rem;
+    right: 0.32rem;
+}
+
+.custom-card-item .mui-table-view:before {
+    top: 0;
+    height: 1px !important;
+}
+
+.custom-card-item h3 {
+    width: 4.626rem;
+    margin-right: 0.346rem;
+}
+
+.mui-text-right {
+    position: absolute;
+    right: 0;
+}
+
+.mui-text-right small.custom-light-gray {
+    display: block;
+    line-height: 1;
+}
+
+.custom-brand-info p {
+    margin-top: 0.12rem;
+}
+
+.custom-brand-info .right-info {
+    padding: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 0.72rem;
+}
+
+.custom-card-footer {
+    text-align: right;
+    padding: 0.3rem 0 0.4rem 0.45rem;
+    overflow: hidden;
+}
+.custom-card-footer .mui-btn {
+    position: static;
+    width: 1.973rem;
+    height: 0.72rem;
+    padding: 0;
+}
+.mui-btn-warning{
+    background-color: #FF7E00;
+    border:none;
+}
+.custom-card-footer .mui-btn {
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+.custom-card-footer p{
+    line-height: 0.72rem;
+}
+.custom-card-footer p>span,
+.custom-card-footer p>span>span{
+    margin-left: 0.18rem;
+}
+
+
+
+.custom-brand-info .right-info span {
+    color: #F8B500;
+    margin-right: 0.1rem;
+}
+
+.order-info .custom-card-content {
+    padding: 0 0.346rem;
+}
+
+.order-info p {
+    font-size: 0.32rem;
+    margin-bottom: 0.12rem;
+    line-height: 2;
+}
+
+
+.custom-list-box {
+    width: 100%;
+}
+
+.custom-list-box .custom-list-pic {
+    margin-right: 0.4rem;
+}
+
+.custom-list-box .custom-brand-info {
+    width: calc(10rem - 4rem);
+    flex: 1;
+    margin-top: -0.1rem;
+}
+
+.custom-list-box .custom-brand-info h3 {
+    font-size: 0.373rem;
+    line-height: 1.5;
+    color: #292929;
+}
+
+
+.custom-list-box .right-info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    line-height: 1;
+}
+
+.custom-list-box .custom-brand-info small:nth-of-type(2) {
+    margin-left: 0.38rem;
+}
+
+.custom-brand-num {
+    bottom: 0;
+    right: 0;
+    color: #8f8f94;
+}
+
+
+
+.custom-card-item .custom-list-pic {
+    width: 2.4rem !important;
+    height: 2.4rem;
+    margin-right: 0.4rem;
+}
+
+.custom-card-item .badges-box .mui-badge {
+    line-height: 1.3;
+}
+
+.custom-card-item li {
+    padding: 0.38rem 0.346rem !important;
+}
+
+.custom-card-item .custom-brand-info h3+p {
+    margin: 0.1rem 0;
+}
+
+.custom-card-item .custom-brand-info .badges-box {
+    padding-bottom: 0.2rem;
+}
+
+
+
+
+
+.mui-segmented-control.mui-scroll-wrapper{
+    height:1.08rem;
+    background-color: #fff;
+}
+
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    height: 1rem;
+    background: #fff;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+    padding: 0 0.44rem;
+    line-height: 1.08rem;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #FF7E00;
+    background-color: #fff;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active span{
+    display: block;
+    position: relative;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active span:after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #FF7E00;
+   
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+    color: #999;
+    background-color: #fff;
+    overflow: initial;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+    border: 0;
+}
+
+.mui-fullscreen .mui-segmented-control~.mui-slider-group{
+    top:1.08rem !important;
+}
+
+
+/* =================================================  popup 消息框  ===================================================*/
+.mui-popup.mui-popup-in{
+    border-radius: 0.106rem;
+}
+.mui-popup-inner,
+.mui-popup .mui-popup-button{
+    border-radius: 0;
+}
+.mui-popup-inner{
+    padding: 0.64rem 0.7rem 0.6rem;
+}
+.mui-popup-buttons{
+    height: 1.386rem;
+}
+.mui-popup .mui-popup-button{
+    height: 1.386rem;
+    line-height: 1.386rem;
+    color: #666666;
+    font-size: 0.4rem;
+}
+.mui-popup .mui-popup-button-bold{
+    color: #FF7E00;
+}
+
+
+.custom-empty{
+    padding-top: 3rem;
+}
+.custom-empty img {
+    width: 5rem !important;
+}
+
+
+
+.mui-toast-container {
+    bottom: 50% !important;
+}

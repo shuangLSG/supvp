@@ -1,0 +1,260 @@
+// $(function () {
+
+    mui.init();
+    (function (mui, $) {
+        // 左侧悬浮按钮
+        document.getElementById('link-home').addEventListener('tap', function () {
+            mui.openWindow({
+                url: '../bargainh5/bargainHome'
+            });
+        });
+        // 隐藏去分享遮罩
+        document.querySelector('.to-share').addEventListener('tap', function () {
+            $('.to-share').addClass('mui-hidden');
+        });
+        // 砍价成功弹框
+        mui(document).on('tap', '#successPopup img', function () {
+            var isSelf = $('#head-icon').attr('data-self');
+
+            if(this.classList.contains('popup-btn')){
+                if (!isSelf) {
+                    mui.openWindow({
+                        url: '../bargainh5/bargainHome'
+                    });
+                } else{
+                    // 去分享
+                    var p = $('#bargainprice span:eq(0)').text();
+                    $('.to-share').removeClass('mui-hidden').find('.font-red').text(p);
+                }
+            }
+            
+            if (this.classList.contains('popup-close') || this.classList.contains('popup-btn')) {
+                $('#successPopup').removeClass('mui-popup-in');
+                $('.mui-popup-backdrop').remove();
+            }
+        });
+    
+    
+    
+    
+        mui('.mui-card-content').on('tap', 'img', function () {
+            if (this.id == 'help_cut') {
+
+               if(actionEvent())return;
+               
+                // 帮好友砍一刀
+                var commodityid = $('.list-container li').attr('data-commodityid'),
+                    bargainid = $('.list-container li').attr('data-bargainid'),
+                    bargainactivityid = $('.list-container li').attr('data-bargainactivityid');
+                var json = {
+                    commodityid: commodityid,
+                    bargainid: bargainid,
+                    bargainactivityid: bargainactivityid
+                }
+                HelpCut(json);
+            } else if (this.classList.contains('link-home')) {
+                mui.openWindow({
+                    url: '../bargainh5/bargainHome'
+                });
+            } else {
+                // 去分享
+                var p = $('#bargainprice span:eq(0)').text();
+                $('.to-share').removeClass('mui-hidden').find('.font-red').text(p);
+            }
+        });
+    
+        /** 
+         * 商品列表展示
+         * commodityid   商品id
+         * bargainid     砍价id
+         */
+        var bargainid = GetQueryString('bargainid'),
+            commodityid = GetQueryString('commodityid');
+        $.post('../bargainh5/bargainQueryById', {
+            'bargainid': bargainid,
+            'commodityid': commodityid
+        }, function (res) {
+            if (res.s == 200) {
+                var data = res.d,
+                    info = data.info;
+    
+                // 砍价成功的弹框  显示按钮： 【邀请好友】 或 【去首页】
+                var isInit = GetQueryString('f'),
+                    price = GetQueryString('p');
+                var popupHt = template('popup_tpl', {
+                    price: price,
+                    self: data.info.self
+                });
+                $('body').append(popupHt);
+                // 展示发起砍价成功的弹框   
+                if (isInit) {
+                    $('#successPopup').addClass('mui-popup-in');
+                    $('body').append(`<div class="mui-popup-backdrop mui-active" style="display: block;"></div>`);
+                }
+    
+                // 倒计时
+                setTimer(res, '.countDownTime-box');
+    
+                // 本人信息 
+                $('#head-icon').attr({
+                    'src': data.info.userphoto,
+                    'data-self': data.info.self
+                });
+                $('#phone').text(data.info.mobile);
+    
+                
+                var bargainprice = isNum2((Number(info.oldprice) - Number(info.newprice)));
+                $('#bargainprice').find('span:eq(0)').text(bargainprice)
+                    .end().find('span:eq(1)').text(info.newprice);
+    
+    
+                $('.progress span').css('width', bargainprice / info.oldprice * 100 + '%');
+                // 显示按钮： 【邀请好友】 或 【帮好友砍一刀】
+                $('.progress-box').after(template('bargainbtn_tpl', {
+                    d: data.info,
+                    zip: zip
+                }));
+                $('.list-container ul').html(template('list_tpl', {
+                    cell: data.info,
+                    zip: zip
+                }))
+                $('.billboard .mui-card-content ul').html(template('billboard_tpl', {
+                    d: data.list,
+                    zip: zip
+                }))
+    
+                var json = {
+                    'bargainactivityid': info.bargainactivityid,
+                    'commodityid': info.commodityid
+                }
+                winners(json, info.name);
+                
+
+            }
+        }, 'json');
+    
+    
+    
+        /** 
+         * 文字滚动
+         * commodityid         商品id
+         * bargainactivityid   后台活动id
+         */
+        function winners(json, name) {
+            $.post('../bargainh5/bargainWinners', json, function (res) {
+                if (res.s == 200) {
+                    var data = res.d;
+                    var html = '';
+                    for (var i = 0; i < data.length; i++) {
+                        html += '<li class="mui-table-view-cell">' + data[i] + '刚刚获得' + name + '</li>'
+                    }
+                    $('.text-scroll').html(html);
+                }
+            }, 'json');
+        }
+    
+    
+        function autoscroll() {
+            //这里的25px是#scrollDiv的高度
+            $('#textScroll').find("ul:first").animate({
+                marginTop: "-1rem"
+            }, 1000, function () {
+                $(this).css("marginTop", "0px").find("li:first").appendTo(this)
+            });
+            /*$(this).css("marginTop","0px")因为在ul向上移25px的时候，其第一个li会添加到ul的末尾，如果ul的marginTop不设为0的话，整个ul就会慢慢移出它的父盒子，最后使得它的父盒子变空，实现不了原本想要实现的效果。*/
+        }
+        setInterval(autoscroll, 2000);
+    
+        /** 
+         * 帮好友砍价
+         * commodityid   商品id
+         * bargainid     砍价id
+         * bargainactivityid  后台活动id
+         */
+        function HelpCut(json) {
+            $.post('../bargainh5/bargaining', json, function (res) {
+                if (res.s == 200) {
+                    window/location.reload();
+                    $('#successPopup').find('.font-red').text(res.d.bargainprice);
+                    $('#successPopup').addClass('mui-popup-in');
+                    $('body').append(`<div class="mui-popup-backdrop mui-active" style="display: block;"></div>`);
+                    
+                } else if (res.s == 999) {
+                    var btnArray = ['取消', '去首页看看']
+                    mui.confirm('同一件商品只能砍价一次哦', '您已经砍过了', btnArray, function (e) {
+                        if (e.index == 1) {
+                            mui.openWindow({
+                                url: '../bargainh5/bargainHome'
+                            });
+                        }
+                    })
+                } else {
+                    mui.toast(res.d);
+                }
+            }, 'json');
+        }
+    
+        function setTimer(res, obj) {
+            // 倒计时
+            var info = res.d.info;
+    
+            setLeftTime(info, timer, obj);
+            var timer = setInterval(function () {
+                setLeftTime(info, timer, obj);
+            }, 1000);
+        }
+    
+        /**
+         * 秒杀倒计时
+         * @param times 指的是时间开始时间或结束时间，
+         * @param nowTime 只的是当前的时间
+         */
+        // var end_time= new Date(new Date().setHours(23, 59, 59, 999)).getTime()+1;
+        function lastTime(times, nowTime, callback) {
+    
+            var leftTime = (times - nowTime);
+            var day = Math.floor(leftTime / (1000 * 60 * 60 * 24));
+            var hour = Math.floor(leftTime / (1000 * 3600)) - (day * 24);
+            var minute = Math.floor(leftTime / (1000 * 60)) - (day * 24 * 60) - (hour * 60);
+            var second = Math.floor(leftTime / (1000)) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            if (callback) {
+                callback(hour, minute, second);
+            }
+    
+        }
+    
+        function setLeftTime(info, timer, obj) {
+            var start_time = new Date(info.bargaintime).getTime();
+            var end_time = start_time + 48 * 60 * 60 * 1000;
+            var now_Time = new Date().getTime();
+
+            if (now_Time < start_time) {
+                //当现在的时间小于开始的时间 ("距离抽奖还有")
+                lastTime(start_time, now_Time);
+            } else if (now_Time < end_time) {
+                //当现在的时间大于开始的时间小于现在结尾的时间("距离抽奖结束还有")
+                lastTime(end_time, now_Time, function (hour, minute, second) {
+                    // console.log(hour, minute, second)
+                    $(obj).html('<div class="time"><span>' + hour + '</span>时<span>' + minute + '</span>分</div>')
+                });
+    
+            } else {
+                //当现在的时间大于结束的时间，说明活动结束。("敬请期待")
+                lastTime(now_Time, now_Time);
+                clearInterval(timer);
+                $(obj).html('<div class="time"><span>00</span>时<span>00</span>分</div>')
+                    .siblings('span').addClass('font-red').html('已失效&nbsp;')
+                $(obj).closest('.mui-card').find('.failed').removeClass('mui-hidden');
+            }
+        }
+    
+    
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005
+        });
+    
+    
+        
+    
+    })(mui, jQuery);
+    // })

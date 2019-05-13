@@ -1,0 +1,105 @@
+
+
+
+// 登录
+document.getElementById('login').addEventListener('tap', toRegister, false);
+// 获取验证码
+document.getElementById('send-code').addEventListener('tap',getCode,false);
+                      
+// 隐藏登录弹框
+document.querySelector('.mui-icon-closeempty').addEventListener('tap',hidePopover,false);
+ 
+
+function hidePopover(){
+    mui('#login_popover').popover('hide');
+}
+
+
+// 未认证提示框
+function rzConfirm(ss){
+    var btnArray = ['取消', '去认证']
+    mui.confirm('认证成功后才能砍价哦', '您尚未认证', btnArray, function (e) {
+        if (e.index == 1) {
+            mui.openWindow({ 
+                url: '../bargainh5/bargainRZ?ss='+ss
+            });
+        }
+    })
+}
+// =========================== 用户注册 ===========================
+
+// 注册
+function toRegister() {
+    $(document).find('input').blur();
+    // 禁止状态
+    if ($('#mobile').val() == "" && $('#code').val() == "") {
+        return;
+    }
+    
+    var mobile = $('#mobile').val();
+    var code = $('#code').val();
+    $.post('../login/webRegister', {
+        "mobile": mobile,
+        "code": code
+    }, function (data) {
+        if (data.s == 200) {
+            if(data.d.identitycard!=1){
+                mui.openWindow({ 
+                    url: '../bargainh5/bargainRZ?ss='+data.ss
+                });
+            }else{
+                mui.toast('登录成功');
+                hidePopover();
+                window.location.reload()
+            }
+        }else{
+            mui.toast(res.d);
+        }
+    }, 'json');
+}
+
+// 获取验证码
+function getCode(){
+    var mobile = $('#mobile').val();
+    var self = this;
+    if (mobile == ""){ 
+        mui.toast('请输入手机号');
+        return;
+    }
+    
+    $.post('../user/regsend', {
+        "mobile": mobile,
+        "activity":1
+    }, function (data) {
+        if (data.s == 200) {
+            mui.toast('发送成功');
+            SetRemainTime(self, 60);
+        } else {
+            mui.toast(data.d);
+        }
+    }, 'json');
+}
+
+//倒计时
+var InterValObj;
+
+function SetRemainTime(el, second, fn) {
+    // 防止多次点击，生成多个定时器
+    if (InterValObj) {
+        clearInterval(InterValObj);
+    }
+    InterValObj = setInterval(function () {
+        if (second > 0) {
+            second = second - 1;
+
+            $(el).text(second + "s").attr('disabled', true);
+        } else {
+            clearInterval(InterValObj);
+            $(el).text('获取验证码').removeAttr('disabled');
+
+            if (fn) {
+                fn();
+            }
+        }
+    }, 1000)
+}

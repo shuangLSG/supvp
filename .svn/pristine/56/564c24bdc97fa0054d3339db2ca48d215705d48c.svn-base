@@ -1,0 +1,118 @@
+@font-face {
+    font-family: SFU DIN MitAlt;
+    src: url("../../fonts/pictos-web.ttf");
+}
+.font-SFU{
+    font-family: SFU DIN MitAlt;
+}
+img{
+    vertical-align: top;
+}
+a:hover,
+a:active{
+    text-decoration: none !important;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+
+.page-section-40{
+    padding: 0 .533rem;
+}
+.page-section-30{
+    padding: 0 .4rem 0.2rem;
+}
+.margin-h-10{
+    margin: 0 0.133rem;
+}
+
+.font-light-blue{
+    color:#C8DCFF;
+}
+.font-blue{
+    color:#3B7DF0;
+}
+.font-turmeric{
+    color:#AB883E;
+}
+.font-red{
+    color:#E70E1D;
+}
+.font-purple{
+    color:#9295AF;
+}
+
+.text-size-39{
+    font-size: 1.04rem;
+}
+.text-size-23{
+    font-size: 0.613rem;
+}
+.text-size-15{
+    font-size: 0.4rem !important; 
+}
+.text-size-13{ 
+    font-size: 0.346rem !important;
+}
+
+
+.banner-box{
+    margin:0.16rem 0 0.36rem;
+}
+
+
+.limit-card{
+    width: 8.933rem;
+    height: 5.013rem;
+    padding: 0.34rem 0.822rem;
+    margin:0.533rem auto 0;
+    background: url(../../images/limit/limit_m_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+.limit-card>div{
+    padding: 0.2rem 0;
+}
+.limit-card span{
+    line-height: 1;
+    color:#fff;
+}
+.limit-card p{
+    line-height: 1.6;
+}
+.limit-card p.text-size-13{
+    margin-bottom: 0.1rem;
+}
+
+.limit-hd{
+    margin-bottom: 0.06rem;
+}
+
+
+/* 认证列表 */
+.authentication-box.mui-table-view:before,
+.authentication-box.mui-table-view:after{
+    height: 0;
+}
+.authentication-box .mui-table-view-cell{
+    height: 1.493rem;
+}
+.authentication-box .mui-table-view-cell:after{
+    left: 0.9rem;
+    right: 0.2rem;
+}
+.authentication-box  .mui-navigate-right:after, .mui-push-right:after{
+    right: 0;
+}
+.authentication-box .mui-table-view-cell .mui-pull-right{
+    margin-right: 0.426rem;
+}
+.authentication-box .mui-table-view-cell>a:not(.mui-btn){
+    padding: 0.44rem 0.12rem;
+    color:#5E677B;
+}
+.authentication-box img{
+    width: 0.506rem;
+    margin-top: 0.08rem;
+    margin-right: 0.16rem;
+}

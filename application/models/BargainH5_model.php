@@ -1,0 +1,70 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+class BargainH5_model extends MY_Model {
+
+    public function __construct() {
+        parent::__construct();
+    }
+
+    // 砍价
+    public function queryBargain($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/BargainQuery", $param);
+        return $res;
+    }
+    // 发起砍价
+    public function initBargain($param) {
+        $param = "p=" . $param;     
+        $res = $this->Post(config_item('supvp_url') . "Bargain/Initiate", $param);
+        return $res;
+    }
+    public function bargainQueryById($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/BargainQueryById", $param);
+        return $res;
+    }
+    
+    public function bargainWinners($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/BargainWinners", $param);
+        return $res;
+    }
+
+    public function bargaining($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/Bargaining", $param);
+        return $res;
+    }
+    public function queryAllBargain($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/BargainingQuery", $param);
+        return $res;
+    }
+    
+    public function bargainAddress($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/Bargainaddress", $param);
+        return $res;
+    }
+
+    public function detail($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/bargaincdetail", $param);
+        return $res;
+    }
+
+    public function bargainIdCard($param) {
+        $param = "p=" . $param;
+        $res = $this->Post(config_item('supvp_url') . "Bargain/BargainIdCard", $param);
+        return $res;
+    }
+    
+
+    
+}

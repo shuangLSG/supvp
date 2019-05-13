@@ -1,0 +1,77 @@
+
+
+.custom-page-nav{
+    height: 1.253rem;
+    padding: 0.346rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.custom-page-nav input{
+    margin-right: 0.32rem;
+}
+
+/* checkbox lists*/
+
+.custom-brand-info .custom-brand-num{
+    position: relative;
+}
+.checkbox-style{
+    padding: 0.32rem;
+    padding-left: 0;
+}
+
+/* 底部 */
+.mui-bar-tab{
+    
+    box-shadow: 0 0 0 !important;
+    border-top: 1px solid #eee;
+}
+.action-bar{
+    height: 1.44rem;
+    padding-left: 0.293rem;
+    bottom:1.3rem;
+}
+.action-bar .pay-total{
+    position: absolute;
+    left: 0.8rem;
+    margin-left: 0.5rem;    
+}
+.action-bar .pay-total p:first-child{
+    margin-top: 0.1rem;
+}
+.action-bar .pay-total p:last-child small{
+   font-size: 0.24rem;
+}
+.action-bar .custom-pay-btn{
+    width:3.2rem;
+    line-height: 1.44rem;
+    height: 100%;
+    background: #FFAA00;
+}
+.action-bar .mui-checkbox{
+    flex-direction: column;
+}
+.action-bar .mui-checkbox input{
+    margin: 0.16rem 0 0;
+}
+
+.numbox-wrapper{
+    padding: 0.38rem;
+    position: absolute;
+    right: -0.2rem;
+    bottom: -0.28rem;
+    z-index: 5;
+}
+.mui-numbox{
+    width: 2.3rem;
+}
+
+.mui-content{
+    padding-bottom: 1.33rem;
+}
+.has-foot-bar{
+    padding-bottom:2.7rem;
+}
+.mode-2.mui-table-view.mui-grid-view {
+    padding: 0 0 0.3rem !important;
+}

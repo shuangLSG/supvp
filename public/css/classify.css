@@ -1,0 +1,117 @@
+.custom-page-nav {
+    border-bottom:1px solid #eee;
+}
+.mui-bar-nav~.mui-content{
+    padding-bottom: 0;
+}
+.menu-box{
+    width:2.16rem;
+    border-right: 1px solid #EEEEEE;
+}
+.menu-box > div,
+.content-box >div{
+    height: 100%;
+    overflow: auto;
+}
+
+.menu-box li{
+    padding: 0.38rem 0;
+    font-size: 0.373rem;
+    text-align: center;
+}
+.menu-box li a{
+    position: relative;        
+    
+    color: #666666;
+}
+
+.menu-box li.active a{
+    color: #FF7E00;
+}
+.menu-box li.active a::before{
+    content:'';
+    position: absolute;
+    left: -92%;
+    width: 0.08rem;
+    height: 0.4rem;
+    background-color: #FF7E00;
+    top: 0.04rem;
+}
+.content-box{
+    flex:1;
+}
+.content-box .main-content{
+    padding-left: 0.453rem;
+}
+.content-box .main-content h5{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.373rem;
+    color: #666;
+}
+.content-box .main-content .mui-table-view .mui-media-object{
+    width: 2.13rem;
+    height: 1.09rem;
+    border:1px solid #eee;
+    box-sizing: border-box;
+}
+.content-box .main-content .mui-table-view .mui-media-object.custom-around{
+    width: 1.33rem;
+    height: 1.33rem;
+}
+.content-box .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+    font-size: 0.34rem;
+    margin-top: 0.14rem;
+    color:#666;
+}
+
+.mui-table-view:before, .mui-table-view:after{
+    background-color: transparent;
+}
+.mui-table-view.mui-grid-view,
+.mui-table-view.mui-grid-view .mui-table-view-cell{
+    padding: 0;
+}
+.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn){
+    margin: 0;
+}
+.mui-table-view.mui-grid-view .mui-table-view-cell{
+    margin-right: 0.32rem;
+    margin-bottom: 0.4rem;
+}
+
+.content-box .mui-table-view.mui-grid-view:nth-of-type(2){
+    padding-right: 0.2rem;
+    margin-left: -0.12rem;
+}
+.content-box .mui-table-view.mui-grid-view .mui-table-view-cell.mui-col-xs-4{
+    /* padding: 0 0.2rem; */
+    margin-right:0 
+}
+
+
+.loading{
+    position: fixed;
+    left: 2.16rem;
+    right: 0;
+    top: 1.17rem;
+    bottom: 0;
+    z-index: 999; 
+    display:none;
+}
+.show{
+    display: flex !important;
+}
+@-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+.Rotation{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 1s linear infinite;
+    -moz-animation: rotation 1s linear infinite;
+    -webkit-animation: rotation 1s linear infinite;
+    -o-animation: rotation 1s linear infinite;
+}
+    

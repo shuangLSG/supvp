@@ -1,0 +1,322 @@
+@font-face {
+    font-family: SFU DIN MitAlt;
+    src: url("../../fonts/pictos-web.ttf");
+}
+.font-SFU{
+    font-family: SFU DIN MitAlt;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+.margin-top-37{
+    margin-top:0.5rem;
+}
+
+.page-section-60{
+    padding: 0 .8rem 0.6rem;
+}
+.page-section-30{
+    padding: 0 .4rem;
+}
+.padding-bt-0{
+    padding-bottom:0;
+}
+
+input::-webkit-input-placeholder {
+    color: #A1A7B9;
+}
+img{
+    vertical-align: top;
+}
+
+.custom-around{
+    border-radius:50%;
+}
+.custom-radius {
+    border-radius: 999px;
+}
+
+.font-black{
+    color:#121C32;
+}
+.font-purple{
+    color:#9295AF;
+}
+.font-deep-purple{
+    color:#4D5D8B;
+}
+.font-gray{
+    color:#A1A7B9;
+}
+.font-blue{
+    color:#367DF8 !important;
+}
+.font-red{
+    color:#E70E1D !important;
+}
+.font-turmeric{
+    color:#AB883E !important;
+}
+.text-size-30{
+    font-size:0.8rem;
+}
+.text-size-25{
+    font-size:0.666rem;
+}
+.text-size-16{
+    font-size: 0.426rem;
+}
+.text-size-14{
+    font-size: 0.373rem;
+}
+.text-size-15{
+    font-size: 0.4rem;
+}
+.text-size-12{ 
+    font-size: 0.32rem;
+}
+
+
+.custom-flex-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mui-btn-disabled:enabled:active,
+.mui-btn-disabled{
+    color:#fff;
+    background-color: #D9DCE4 !important;
+}
+button.custom-btn-gradient:enabled:active,
+.custom-btn-gradient{
+    color:#fff;
+    background-color: transparent;
+    background: -webkit-linear-gradient(left, #2273FF , #4CA0FF);
+    background: -o-linear-gradient(right, #2273FF , #4CA0FF);
+    background: linear-gradient(to right, #2273FF , #4CA0FF);
+}
+
+
+
+.limit-hd h2{
+    padding: 0.6rem 0;
+}
+.limit-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    width: 5.546rem;
+    height: 2.746rem;
+    margin: 0.07rem auto 0;
+    background: url(../../images/limit/limit_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.limit-content p{
+    line-height: 1;
+    margin-top: 0.4rem;
+}
+
+.mui-toast-container {
+    bottom: 50% !important;
+}
+
+.limit-bd{
+    padding-top: 0.1rem;
+}
+.mui-input-group:before{
+    height: 0;
+}
+.mui-input-group:after{
+    background-color: #eee;
+}
+.mui-input-group .mui-input-row:after{
+    left:0;
+    background-color: #eee;
+}
+.mui-input-group .mui-input-row{
+    height:auto;
+    margin-top:0.4rem;
+}
+.mui-input-group input{
+    height:auto;
+    line-height: initial;
+    padding: 0.33rem 0;
+}
+.mui-input-group label{
+    padding: 0.33rem 0;
+}
+.mui-button-row{
+    margin-top: 0.64rem;
+}
+.mui-button-row button{
+    height: 1.253rem;
+    padding: 0;
+    
+    margin: 0.2rem 0 0;
+    border:none;
+}
+
+.mui-input-row img{
+    position: absolute;
+    right: 0;
+    width: 0.22rem;
+    top: 36%;
+}
+
+/* 认证中 */
+.rzFailed-container .limit-hd h2,
+.auditing-container .limit-hd h2{
+    margin-bottom: 0.4rem;
+}
+.rzFailed-container .limit-hd img,
+.auditing-container .limit-hd img{
+    width:5.546rem;
+}
+.rzFailed-container .explain-box,
+.auditing-container .explain-box{
+    height: 4.3rem;
+    background-color: #FAFBFD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 0.7rem 0 0.8rem;
+    margin-top:1rem;
+}
+.rzFailed-container .explain-box h4{
+    padding: 0.14rem 0 0.3rem;
+    color:#717274;
+}
+.rzFailed-container .explain-box p,
+.auditing-container .explain-box p{
+    color:#717274;
+    font-size:0.346rem;
+    line-height: 2.2;
+}
+.rzFailed-container .mui-button-row,
+.auditing-container .mui-button-row {
+    margin-top: 0.9rem;
+}
+
+
+/* 认证成功 */
+.rzSocialContact-container .limit-content.success,
+.rzSuccess-container .limit-content,
+.rzCreditCardSuccess-container .limit-content{
+    background: url(../../images/limit/limit_bg_3.png) no-repeat;
+    background-size: 100% 100%;
+    color:#367DF8;
+}
+.rzSuccess-container .limit-bd{
+    margin: 0.4rem;
+    padding-top:0;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 1px 12px 0px rgba(109,109,109,0.13);
+    border-radius:0.08rem;
+}
+
+.line-none.mui-table-view:before,
+.line-none.mui-table-view:after,
+.line-none .mui-table-view-cell:after,
+.rzSuccess-container .mui-table-view:before,
+.rzSuccess-container .mui-table-view:after,
+.rzCreditCardSuccess-container .mui-table-view:before,
+.rzCreditCardSuccess-container .mui-table-view:after,
+.rzCreditCardSuccess-container .mui-table-view-cell:after{
+    height: 0;
+}
+.rzSuccess-container .mui-table-view{
+    padding: 0 0.48rem;
+}
+.rzSuccess-container .mui-table-view-cell{
+    padding: 0.39rem 0;
+    font-size: 0.373rem;
+}
+.rzSuccess-container .mui-table-view-cell:after{
+    left:0;
+    background-color: #eee;
+}
+.re-certification{
+    padding:0.4rem 0;
+}
+
+/* 社交认证 */
+.rzSocialContact-container .limit-bd{
+    padding-top: 0.34rem;
+}
+.rzSuccess-container .other{
+    box-shadow: 0 0 0;
+}
+.rzSuccess-container .other ul{
+    padding:0;
+}
+.rzSuccess-container .other .mui-table-view img.logo,
+.rzSocialContact-container  .mui-table-view img.logo{
+    width:0.853rem;
+    margin-right: 0.5rem;
+}
+.rzSuccess-container .other .mui-table-view span.state,
+.rzSocialContact-container  .mui-table-view span.state{
+    position: absolute;
+    right: 0.64rem;
+}
+.rzSocialContact-container .mui-table-view img.arrow{
+    width: 0.18rem;
+    position: absolute;
+    right: 0.7rem;
+}
+.rzSuccess-container .other .mui-table-view li,
+.rzSocialContact-container  .mui-table-view li{
+    height:1.466rem;
+    padding: 0 0 0 0.4rem;
+    margin-bottom:0.4rem;
+    border:1px solid #eee;
+    box-shadow:0px 2px 20px 0px rgba(109,109,109,0.07);
+    border-radius:6px;
+}
+.rzSuccess-container .other .mui-table-view li,
+.rzSocialContact-container .mui-table-view li.mui-table-view-cell{
+    display: flex;
+    align-items: center;
+}
+.rzSuccess-container .other .mui-table-view li span,
+.rzSocialContact-container .mui-table-view li.mui-table-view-cell span{
+    color:#5E677B;
+}
+
+.limit-bd
+.rzSuccess-container .mui-table-view.other li .other{
+    padding:0;
+}
+/* 信用卡认证结果页 */
+.rzCreditCardSuccess-container .limit-bd {
+    padding-top: 0.2rem;
+}
+.rzCreditCardSuccess-container li{
+    width:8.4rem;
+    height:2.66rem;
+    padding:0.44rem 0.626rem;
+    margin-bottom:0.48rem;
+    background: url(../../images/limit/credit_card_bg.png) no-repeat;
+    background-size: 100% 100%;
+    color:#121C32;
+
+    border:1px solid rgba(238,238,238,1);
+    box-shadow:0px 2px 20px 0px rgba(109,109,109,0.07);
+    border-radius:6px;
+}
+.rzCreditCardSuccess-container li span{
+    display: block;
+    width: 100%;
+    height:1.106rem;
+    line-height:1.106rem;    
+    margin-bottom: 0.2rem;
+    font-size:0.613rem;
+    text-align: center;
+    background:rgba(220,228,242,0.15);
+}

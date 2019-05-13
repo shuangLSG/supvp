@@ -1,0 +1,196 @@
+img{
+    width: 100%;
+    vertical-align: top;
+}
+.font-light-blue{
+    color:#EEF4FF;
+}
+.font-light-blue2{
+    color:#C8DCFF;
+}
+.font-blue{
+    color:#2374FF;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+.mui-scroll-wrapper{
+    bottom:1.4rem;
+}
+
+
+.limit-top {
+    height: 4.306rem;
+    padding: 0.54rem;
+    margin: 0 0.333rem 0.333rem;
+    color: #fff;
+    background: url(../../images/limit/limit_1_bg.png) no-repeat;
+    background-size: 100%;
+}
+
+.limit-top P {
+    margin-top: 0.22rem;
+    margin-bottom: 0.34rem;
+    /* margin-top: 0.2rem;
+    margin-bottom: 0.586rem; */
+    /* color: #fff; */
+}
+
+.limit-top .tologin-box img{
+    width: 5.2rem;
+}
+.limit-top .signed-box img{
+    width: 3.106rem;
+}
+.limit-top h3 {
+    padding: 0.2rem;
+}
+
+.limit-top h1 {
+    padding: 0.2rem 0;
+    line-height: 1;
+    font-size: 0.933rem;
+}
+
+
+.limit-box {
+    text-align: left;
+}
+.limit-box > div{
+    position: relative;
+}
+.limit-box .link-limitMange{
+    padding: 0.2rem 0;
+    position: absolute;
+    right: 0;
+}
+.limit-box,.signed-box{
+    padding-top: 0.1rem;
+}
+.limit-box h1{
+    padding: 0.16rem 0;
+}
+.limit-box .mui-row span{
+    display: block;
+}
+.limit-box .mui-row span:last-child{
+    padding-top: 0.16rem;
+}
+.activity-box {
+    height: 2.133rem;
+    margin:0 0.466rem 0.48rem;
+}
+
+.tab-box {
+    padding: 0 0.386rem;
+    justify-content: space-between;
+}
+
+.tab-box li {
+    position: relative;
+    width: 2.96rem;
+    height: 1.786rem;
+    color: #fff;
+
+}
+
+.tab-box li .tab-item-content {
+    padding-left: 0.426rem;
+    flex-direction: column;
+    justify-content: center;
+}
+.tab-box li .tab-item-content span{
+    color:rgba(255,255,255,0.8);
+}
+
+.tab-box li img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+/**** 认证 ****/
+.section-authentication{
+    margin-top: 0.28rem;
+}
+
+.section-authentication img {
+    width: 0.586rem;
+    height: 0.586rem;
+}
+
+.section-authentication .module-hd {
+    position: relative;
+    padding: 0.1rem 0.7rem;
+    height: auto;
+}
+.section-authentication strong{
+    color:#101D37
+}
+.section-authentication .module-hd strong:before {
+    content: '';
+    position: absolute;
+    top: 0.18rem;
+    left: 0.466rem;
+    width: 0.08rem;
+    height: 0.426rem;
+    background-color: #5B9CFF;
+}
+
+
+
+.section-authentication .mui-table-view:before,
+.mui-table-view:after {
+    height: 0;
+}
+
+.section-authentication .mui-table-view.mui-grid-view {
+    padding: 0;
+}
+
+.mui-table-view.mui-grid-view .mui-table-view-cell {
+    padding-top: 0.32rem;
+    padding-bottom: 0.1rem;
+}
+
+.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+    font-size: 0.32rem;
+    margin-top: 0.3rem;
+    color: #5F697A;
+}
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(1),
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(5),
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(9){
+    padding-left: 0.16rem;
+}
+
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(3),
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(4),
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(7),
+.mui-table-view.mui-grid-view li.mui-table-view-cell:nth-of-type(8){   
+    padding-left: 0.52rem;
+}
+
+
+/* limit page  */
+.authentication-popup .mui-icon{
+    position: absolute;
+    top: 1rem;
+    right: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+}
+.authentication-popup .mui-popup-inner:after{
+    background-color: transparent;
+}
+.authentication-popup .mui-popup-buttons {
+    height: 1.8rem;
+}
+.authentication-popup .mui-popup-buttons img{
+    width: 3.373rem;
+    height: 1.133rem;
+}

@@ -1,0 +1,313 @@
+html,
+body {
+    height: 100%;
+}
+
+input::-webkit-input-placeholder {
+    color: #A6A6A6;
+}
+.mui-radio input[type=radio]:checked:before {
+    content: '\e442';
+}
+
+
+.mui-scroll-wrapper .mui-scroll{
+    padding: 0.266rem;
+}
+.mui-bar-nav~.mui-content {
+    padding-bottom: 1.33rem;
+}
+.address-box{
+    position: relative;
+    height: 2.186rem;
+    background-color: #fff;
+}
+.address-box li.mui-table-view-cell{
+    padding-top: 0.38rem;
+    padding-right: 0.36rem;
+}
+.address-box h3 span{
+    margin-left: 0.666rem;
+}
+.address-box li.mui-table-view-cell p{
+    margin-top: 0.18rem;
+}
+.address-box >img{
+    position: absolute;
+    bottom: 0;
+}
+.default-address {
+    height: 1.06rem;
+    line-height: 1.06rem;
+    color: #9a9a9a;
+    margin-left: 0.4rem;
+}
+
+.default-address.mui-checkbox input[type=checkbox]:before {
+    font-size: 0.5rem;
+}
+
+
+.custom-card-content form.mui-input-group .mui-input-row{
+    min-height: 1.52rem;
+}
+.custom-card-content form.mui-input-group .mui-radio input[type=radio] {
+    position: absolute;
+    right: 0.2rem;
+    top: 0.5rem;
+}
+
+.custom-card-content form.mui-input-group img{
+    width: 0.533rem;
+    height: auto;
+    margin-right: 0.16rem;
+    vertical-align: middle;
+}
+.custom-card-content form.mui-input-group .accordion-box{
+    padding:0 !important;
+}
+.custom-card-content form.mui-input-group .accordion-box>a:not(.mui-btn){
+    margin: -0.5rem -0.7rem;
+}
+.custom-card-content form.mui-input-group .accordion-box .mui-input-row:before,
+.custom-card-content form.mui-input-group .accordion-box .mui-table-view:before,
+.custom-card-content form.mui-input-group .accordion-box .mui-table-view-cell:after{
+    height: 0;
+}
+.custom-card-content form.mui-input-group .mui-table-view:after{
+    left: 0.4rem;
+}
+.custom-card-content form.mui-input-group .accordion-box ul{
+    margin-top: -0.36rem;
+    padding-bottom: 0.2rem;
+}
+/* .custom-card-content form.mui-input-group .accordion-box .mui-table-view-cell{
+    padding-right: 0.2rem !important;
+} */
+.custom-card-content form.mui-input-group .accordion-box .mui-table-view-cell>a:not(.mui-btn){
+    margin-right:-0.4rem;
+}
+.custom-card-content form.mui-input-group .accordion-box .mui-table-view-cell>a:not(.mui-btn) span:first-child{    
+    padding-left: 0.8rem;
+}
+.custom-card-content form.mui-input-group .accordion-box .mui-pull-right{
+    font-size: 0.346rem;
+}
+
+.custom-card-content form.mui-input-group .accordion-box small{
+    margin-left: 0.2rem;
+}
+   
+
+.order-spec .mui-table-view-cell{
+    font-size: 0.373rem;
+    height: 1.2rem;
+    padding-right: 0.2rem;
+}
+.order-spec .mui-table-view-cell>a:not(.mui-btn){
+    margin: -0.24rem -0.4rem;
+}
+.order-spec .mui-table-view-cell input {
+    width: 70%;
+    height: 100%;
+    font-size: 0.4rem;
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+    margin-left: 0.4rem;
+}
+.order-spec .mui-navigate-right .mui-pull-right{
+    margin-right: 0.8rem;
+    font-size: 0.373rem;
+}
+.order-spec .mui-pull-right{
+    margin-right: 0.4rem;
+}
+.empty-address {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.4rem;
+    color: #888;
+}
+.empty-address img{
+    width:0.586rem;
+    height:0.586rem;
+    margin-top: 0.266rem;
+}
+
+
+.custom-page-nav .mui-btn-link{
+    font-size: 0.42rem;
+}
+.has-foot-bar {
+    padding-bottom: 1.44rem;
+}
+.custom-pay-bar.mui-bar{
+    height: 1.44rem;
+    line-height: initial;
+}
+.custom-pay-bar.mui-bar .amortize span{
+    line-height: initial;
+}
+.custom-pay-btn {
+    height: 1.44rem;
+    line-height: 1.44rem;
+    font-size: 0.4rem;
+    background-color: #FFAA00;
+}
+.custom-pay-bar.mui-bar p:first-child{
+    padding-top: 0.1rem;
+    /* margin-bottom: 0.08rem; */
+}
+
+
+.mui-collapse-content{
+    position: relative;
+    display: none;
+    overflow: hidden;
+    margin: 11px -15px -11px;
+    padding: 8px 15px;
+    -webkit-transition: height .35s ease;
+    -o-transition: height .35s ease;
+    transition: height .35s ease;
+    background: #fff;
+}
+/* .server-time {
+    font-size: 0.34rem;
+    margin-left: 0.4rem;
+}
+
+.server-icon {
+    height: 1rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+} */
+
+
+
+
+/* popover */
+.mui-popover.custom-popover{
+    min-height: 9.026rem;
+    background-color: #fff;
+}
+
+.mui-popover.custom-popover .mui-card-content-inner{
+    padding: 0.266rem 0.56rem;
+}
+.invoice-box h3{
+    padding: 0.293rem 0;
+}
+.invoice-wrapper{
+    padding-top: 0.2rem;
+}
+.invoice-wrapper .mui-segmented-control{
+    display: flex;
+    justify-content: space-between;
+    width: 4.866rem;
+    padding-top: 0.1rem;
+    border:none;    
+}
+.invoice-wrapper .mui-segmented-control .mui-control-item{
+    width: 1.866rem;
+    height: 0.746rem;
+    line-height: 0.746rem;
+    border-radius:999px;
+    border:1px solid #D5D5D5;
+    color:#222;
+}
+.invoice-wrapper .mui-segmented-control .mui-control-item.mui-active{
+    background-color:#FFF8F2;
+    color:#FF7E00;
+    border:1px solid #FF7E00;
+}
+.invoice-wrapper .mui-control-content{
+    padding-top: 0.3rem;
+}
+.invoice-wrapper .button-box{
+    margin-top: 0.2rem;
+}
+.invoice-wrapper button{
+    width: 6.8rem;
+    height: 1.106rem;
+    color:#fff;
+    border: none;
+}
+.invoice-wrapper  .mui-input-group{
+    margin-bottom: 0.34rem;
+}
+.invoice-wrapper  .mui-input-group .mui-input-row:after{
+    background-color: transparent;
+}
+.invoice-wrapper .mui-input-row{
+    height: auto;
+    margin-bottom:1px;
+}
+.invoice-wrapper .mui-input-row label{
+    width: 20%;
+    padding: 0;
+}
+.invoice-wrapper .mui-input-row label~input{
+    width: 80%;
+    height: 1.15rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+
+/*** 优惠券 ***/
+.mui-popover.custom-popover .mui-table-view.mode-2{
+    padding: 0 0.453rem;
+}
+.mui-popover.custom-popover .coupon-box .mui-card-content-inner,
+.coupon-box .mui-checkbox label,
+.mui-popover.custom-popover label{
+    padding: 0;
+}
+.coupon-box .mui-input-row{
+    flex:1;
+}
+.coupon-box .mui-radio input[type=radio]{
+    top: 32%;
+    right: 0;
+    text-align: right;
+}
+.mui-input-right{
+    position: absolute;
+    top: 32%;
+    right: 0;
+}
+.mui-input-right small{
+    margin-right: 0.2rem;
+}
+.mui-input-right .like-radio{
+    width: 0.533rem;
+    height: 0.533rem;
+}
+/*** 分期 ***/
+.mui-popover.custom-popover .amortize-box .mui-card-content-inner{
+    padding: 0;
+    background-color: #F9F9FC;
+}
+.amortize-box .content-hd{
+    padding: 0.24rem 0.533rem;
+}
+.amortize-box .content-hd p{
+    line-height: 2;
+}
+.amortize-box .mui-input-group .mui-input-row:after{
+    left: 0.533rem;
+    right: 0.533rem;
+}
+.amortize-box .mui-radio label{
+    padding-left: 0.533rem;
+}
+.amortize-box  form.mui-input-group .mui-radio input[type=radio]{
+    right: 0.533rem;
+    text-align: right;
+}

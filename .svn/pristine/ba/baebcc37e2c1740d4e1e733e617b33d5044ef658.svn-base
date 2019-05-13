@@ -1,0 +1,148 @@
+.text-size-15{
+    font-size: 0.4rem !important; 
+}
+.text-size-14{
+    font-size: 0.37rem;
+}
+.text-size-13{ 
+    font-size: 0.346rem !important;
+}
+.text-size-12{ 
+    font-size: 0.32rem;
+}
+.page-bg{
+    background-color: #F9F9FC;
+}
+.mui-table-view:after{
+    height: 0;
+}
+
+.mui-table-view{
+    margin-bottom: 0.266rem;
+}
+.mui-media {
+    padding: 0.38rem 0.4rem;
+}
+.mui-media .mui-media-object {
+    width: 0.88rem;
+    height: 0.733rem;
+    margin-top: 0.38rem;
+}
+.mui-table-view .mui-media-object.mui-pull-left {
+    margin-right: 10px;
+}
+.mui-media  .mui-media-body p:last-child{
+    margin-top: 0.1rem;
+    
+}
+.mui-media  .mui-media-body p span{
+    color:#444;
+}
+.mui-media .mui-media-object {
+    width: 0.88rem;
+    height: 0.733rem;
+    margin-top: 0.26rem;
+}
+
+/*================= 时间线 =========================*/
+.custom-timeline-wrapper {
+    position: relative;
+    padding-bottom: 0.6rem;
+    background-color: #fff;
+}
+.custom-timeline-wrapper h3{
+    color:#222;
+    padding: 0.4rem 0.32rem;
+}
+
+.custom-timeline-wrapper ul {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-timeline-wrapper li {
+    display: flex;
+    overflow: hidden;
+    color: #8f8f94;
+}
+
+.custom-timeline-wrapper li:last-child .custom-timeline-content {
+    padding: 0;
+}
+
+.custom-timeline-wrapper li.custom-current,
+.custom-timeline-wrapper li.custom-current p {
+    color: #FF7E00 !important;
+}
+
+
+.custom-timeline-info {
+    position: relative;
+    margin-left: 0.8rem;
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.533rem;
+    border-left: 1px solid #eee;
+}
+.custom-timeline-info:after,
+.custom-timeline-info:before{
+    content:"";
+    position: absolute;
+    top: 0.06rem;
+    left: -0.14rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    z-index: 2;
+    background: #fff;
+    border-radius:50%;
+}
+.custom-timeline-info:before{
+    top:-0.1rem;
+}
+.custom-timeline-info:after{
+    width: 0.14rem;
+    height: 0.14rem;
+    background-color: #ddd;
+    left: -0.08rem;
+}
+
+.custom-timeline-wrapper img{
+    position: absolute;
+    top: 0.06rem;
+    left: 0.5rem;
+    width: 0.533rem;
+    height: 0.533rem;
+    z-index: 4;
+    background-color: #fff;
+}
+
+.custom-timeline-info h3 {
+    font-size: 0.36rem;
+    margin-bottom: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.custom-timeline-info p {
+    padding-top: 0.14rem;
+    padding-right: 0.3rem;
+    line-height: 0.4rem;    
+    color:#444;
+}
+.custom-timeline-info p:last-child{
+    color:#A6A6A6;
+    margin-top: 0.28rem;
+}
+
+
+.custom-empty{
+    position: fixed;
+    top: 22%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 30%;
+    background-color: #fff;
+    z-index: 99;
+}
+.custom-empty img{
+    width: 3rem;
+}
